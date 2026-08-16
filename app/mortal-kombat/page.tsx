@@ -107,10 +107,10 @@ export default function Page() {
           most guides use 1, 2, 3, and 4.
         </p>
 
-        <div className="list justify-between">
+        <div className="list justify-around">
           <div className="flex items-center gap-2 flex-col">
             <p>Xbox</p>
-            <div className="w-20 h-20 text-4xl grid grid-cols-3 grid-rows-3">
+            <div className="w-20 h-20 text-3xl grid grid-cols-3 grid-rows-3">
               <div></div>
               <TbXboxY />
               <div></div>
@@ -124,7 +124,7 @@ export default function Page() {
 
           <div className="flex items-center gap-2 flex-col">
             <p>PlayStation</p>
-            <div className="w-20 h-20 text-4xl grid grid-cols-3 grid-rows-3">
+            <div className="w-20 h-20 text-3xl grid grid-cols-3 grid-rows-3">
               <div></div>
               <TbPlaystationTriangle />
               <div></div>
@@ -138,7 +138,7 @@ export default function Page() {
 
           <div className="flex items-center gap-2 flex-col">
             <p>Numbers</p>
-            <div className="w-20 h-20 text-4xl grid grid-cols-3 grid-rows-3">
+            <div className="w-20 h-20 text-3xl grid grid-cols-3 grid-rows-3">
               <div></div>
               <TbCircleNumber2 />
               <div></div>

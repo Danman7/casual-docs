@@ -20,7 +20,7 @@ export const SourceLink: React.FC<{
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="inline-flex flex-wrapper gap-2 items-center"
+    className="inline-flex icon-text"
   >
     {TypeIconMap[type]} {text}
   </Link>

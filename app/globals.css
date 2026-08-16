@@ -4,6 +4,7 @@
   --background: var(--color-neutral-50);
   --foreground: var(--color-neutral-600);
   --bold-foreground: var(--color-neutral-800);
+  --surface: var(--color-neutral-100);
   --primary: var(--color-orange-700);
 }
 
@@ -11,6 +12,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-bold-foreground: var(--bold-foreground);
+  --color-surface: var(--surface);
   --color-primary: var(--primary);
 }
 
@@ -19,44 +21,59 @@
     --background: var(--color-neutral-900);
     --foreground: var(--color-neutral-200);
     --bold-foreground: var(--color-neutral-100);
+    --surface: var(--color-neutral-800);
     --primary: var(--color-orange-400);
   }
+}
+
+@utility center-wrapper {
+  @apply mx-auto w-full max-w-3xl;
 }
 
 @utility list {
   @apply flex flex-wrap gap-4;
 }
 
+@utility icon-text {
+  @apply flex gap-2 items-center;
+}
+
 @layer base {
   body {
     background: var(--background);
     color: var(--foreground);
-    @apply py-16 px-4;
-  }
-
-  section {
-    @apply space-y-4 mt-4;
+    @apply p-4;
   }
 
   a {
-    @apply underline text-primary hover:opacity-80;
+    @apply hover:text-primary;
   }
 
-  img {
-    @apply opacity-90 filter-[saturate(.75)_contrast(.92)_brightness(1.03)_sepia(.08)];
-  }
+  main {
+    section {
+      @apply space-y-4 mt-4;
+    }
 
-  h1,
-  h2,
-  strong {
-    @apply text-bold-foreground;
-  }
+    a {
+      @apply underline text-primary hover:opacity-80;
+    }
 
-  h1 {
-    @apply text-4xl font-bold;
-  }
+    img {
+      @apply opacity-90 filter-[saturate(.75)_contrast(.92)_brightness(1.03)_sepia(.08)];
+    }
 
-  h2 {
-    @apply text-2xl font-semibold pt-4;
+    h1,
+    h2,
+    strong {
+      @apply text-bold-foreground;
+    }
+
+    h1 {
+      @apply text-4xl font-bold;
+    }
+
+    h2 {
+      @apply text-2xl font-semibold pt-4;
+    }
   }
 }
