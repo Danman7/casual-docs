@@ -59,7 +59,20 @@
     }
 
     img {
-      @apply opacity-90 filter-[saturate(.75)_contrast(.92)_brightness(1.03)_sepia(.08)];
+      @apply opacity-90;
+    }
+
+    ul,
+    ol {
+      @apply pl-5;
+    }
+
+    ul {
+      @apply list-disc [&_ul]:list-[revert] [&_ul]:ml-6;
+    }
+
+    ol {
+      @apply list-decimal;
     }
 
     h1,
@@ -69,7 +82,7 @@
     }
 
     h1 {
-      @apply text-4xl font-bold;
+      @apply text-4xl font-bold mb-8;
     }
 
     h2 {
