@@ -26,7 +26,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <IoMenu />
         </header>
 
-        <main className="center-wrapper py-16">{children}</main>
+        <main className="center-wrapper flex flex-1 flex-col py-16">
+          {children}
+        </main>
       </body>
     </html>
   );
