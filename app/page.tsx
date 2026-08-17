@@ -1,9 +1,9 @@
 import Link from "next/link";
 
-import { getTopLevelPages } from "@/app/utils/getTopLevelPages";
+import { getTopLevelPages } from "@/app/siteMap";
 
-export default async function Home() {
-  const pages = await getTopLevelPages();
+export default function Home() {
+  const pages = getTopLevelPages();
 
   return (
     <div className="flex flex-1 flex-col items-center justify-around text-center">

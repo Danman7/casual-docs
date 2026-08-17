@@ -1,13 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { getPage } from "@/app/siteMap";
 import { SourceLink } from "@/app/ui/SourceLink";
 import Warhammer40k from "../../public/wh40k/warhammer-40k.webp";
+
+const warhammerPage = getPage("/warhammer-40k");
+
+export const metadata = warhammerPage.metadata;
 
 export default async function Page() {
   return (
     <>
-      <h1>Warhammer 40,000</h1>
+      <h1>{warhammerPage.title}</h1>
 
       <section>
         <Image

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import MKLogo from "../../public/mk/mk_logo.webp";
 import { SourceLink } from "../ui/SourceLink";
+import { getPage } from "@/app/siteMap";
 import {
   TbCircleNumber1,
   TbCircleNumber2,
@@ -16,10 +17,14 @@ import {
   TbXboxY,
 } from "react-icons/tb";
 
+const mortalKombatPage = getPage("/mortal-kombat");
+
+export const metadata = mortalKombatPage.metadata;
+
 export default function Page() {
   return (
     <>
-      <h1>Mortal Kombat</h1>
+      <h1>{mortalKombatPage.title}</h1>
 
       <section>
         <Image

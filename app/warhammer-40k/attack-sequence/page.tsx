@@ -1,14 +1,19 @@
-import Image from "next/image";
+import { getPage } from "@/app/siteMap";
+import { woundRollColumns, woundRollRows } from "@/app/warhammer-40k/constants";
 import { Divider } from "@/app/ui/Divider";
+import { Table } from "@/app/ui/Table";
 
-import attack from "@/app/assets/wh40k/attack.webp";
 import { BsFillDice6Fill } from "react-icons/bs";
 import { GiBolterGun, GiHumanTarget, GiRollingDices } from "react-icons/gi";
+
+const attackSequencePage = getPage("/warhammer-40k/attack-sequence");
+
+export const metadata = attackSequencePage.metadata;
 
 export default async function Page() {
   return (
     <>
-      <h1>Attack Sequence</h1>
+      <h1>{attackSequencePage.title}</h1>
 
       <section>
         <h2 id="compare">Attacks compare the weapon to the target</h2>
@@ -19,20 +24,14 @@ export default async function Page() {
           of the target.
         </p>
 
-        <div className="flex-list justify-between">
+        <div className="list justify-between">
           <div>
             <div className="lead">
               Weapon <GiBolterGun />
             </div>
-            <div>
-              Strength (S)
-            </div>
-            <div>
-              Armor Penetration (AP)
-            </div>
-            <div>
-              Damage (D)
-            </div>
+            <div>Strength (S)</div>
+            <div>Armor Penetration (AP)</div>
+            <div>Damage (D)</div>
           </div>
 
           <div>
@@ -46,15 +45,9 @@ export default async function Page() {
             <div className="lead">
               Target <GiHumanTarget />
             </div>
-            <div>
-              Toughness (T)
-            </div>
-            <div>
-              Saves (Sv)
-            </div>
-            <div>
-              Wounds (W)
-            </div>
+            <div>Toughness (T)</div>
+            <div>Saves (Sv)</div>
+            <div>Wounds (W)</div>
           </div>
         </div>
       </section>
@@ -97,9 +90,7 @@ export default async function Page() {
           </li>
 
           <li>
-            Check if the result is equal to or higher than the weapon's{" "}
-            BS/WS
-            .
+            Check if the result is equal to or higher than the weapon's BS/WS .
           </li>
 
           <li>
@@ -113,9 +104,7 @@ export default async function Page() {
           <strong>
             unmodified roll of 6 is a <em>critical hit</em>.
           </strong>{" "}
-          Some{" "}
-          weapon keywords{" "}
-          care about critical hits.
+          Some weapon keywords care about critical hits.
         </p>
 
         <h3 id="wound-roll">2. Roll to wound</h3>
@@ -153,19 +142,17 @@ export default async function Page() {
           <strong>
             defender chooses which target models will receive them
           </strong>{" "}
-          (unless the weapons have{" "}
-          Precision).
-          They <em>must</em> choose models that have already lost wounds first.
+          (unless the weapons have Precision). They <em>must</em> choose models
+          that have already lost wounds first.
         </p>
 
         <h3 id="save-roll">4. Roll to save</h3>
 
         <p>
-          Every datasheet has an{" "}
-          <em>Armor Save</em>, but some have an additional{" "}
-          <em>Invulnerable save</em>. If you are the defender, and the unit has
-          an Invulnerable save, you can choose to roll for one of them, but not
-          both.
+          Every datasheet has an <em>Armor Save</em>, but some have an
+          additional <em>Invulnerable save</em>. If you are the defender, and
+          the unit has an Invulnerable save, you can choose to roll for one of
+          them, but not both.
         </p>
 
         <p className="lead">Armor save (Sv)</p>
@@ -266,10 +253,8 @@ export default async function Page() {
         </p>
 
         <p>
-          Number of{" "}
-          Attacks per
-          weapon multiplied by the number of models using it, give you the
-          number of dice to roll.
+          Number of Attacks per weapon multiplied by the number of models using
+          it, give you the number of dice to roll.
         </p>
 
         <p className="example">
@@ -307,8 +292,6 @@ export default async function Page() {
           The system is designed so no attack is ever guaranteed.
         </p>
 
-        <Image src={attack} alt="Attack sequence example" className="my-6" />
-
         <h3 id="volume">Volume flattens variance</h3>
 
         <p>
@@ -328,17 +311,13 @@ export default async function Page() {
         <h3 id="big-damage">Re-rolls plus critical effects equal big damage</h3>
 
         <p>
-          Weapons with{" "}
-          Sustained Hits
+          Weapons with Sustained Hits
           {", "}
-          Lethal Hits,
-          or{" "}
-          Devastating Wounds
+          Lethal Hits, or Devastating Wounds
           {", "}
           wielded by units with re-roll access, become primary damage dealers.
-          They get even better with{" "}
-          Anti-KEYWORD X+{" "}
-          because it lowers the roll needed for a critical wound.
+          They get even better with Anti-KEYWORD X+ because it lowers the roll
+          needed for a critical wound.
         </p>
 
         <p className="example">
@@ -357,8 +336,7 @@ export default async function Page() {
 
         <p>
           <strong>
-            Torrent, Lethal
-            Hits and Devastating Wounds skip certain gates
+            Torrent, Lethal Hits and Devastating Wounds skip certain gates
           </strong>{" "}
           and increase the success chance. The practical question is which gate
           your weapon is weak into: hitting, wounding, saving throws, or damage

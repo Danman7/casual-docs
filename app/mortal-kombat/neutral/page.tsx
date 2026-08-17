@@ -1,12 +1,17 @@
 import Image from "next/image";
 
+import { getPage } from "@/app/siteMap";
 import FightScreen from "../../../public/mk/fight.webp";
 import Spacing from "../../../public/mk/spacing.webp";
+
+const neutralPage = getPage("/mortal-kombat/neutral");
+
+export const metadata = neutralPage.metadata;
 
 export default function Page() {
   return (
     <>
-      <h1>Neutral</h1>
+      <h1>{neutralPage.title}</h1>
 
       <section>
         <p>

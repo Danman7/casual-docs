@@ -1,14 +1,13 @@
-import Image from "next/image";
+import { getPage } from "@/app/siteMap";
 
-import guardsmen from "@/app/assets/wh40k/CadianShockTroops.webp";
-import intercessors from "@/app/assets/wh40k/interfcessors.webp";
-import rhino from "@/app/assets/wh40k/rhino.webp";
-import terminators from "@/app/assets/wh40k/terminators.webp";
+const profileArchetypesPage = getPage("/warhammer-40k/profile-archetypes");
+
+export const metadata = profileArchetypesPage.metadata;
 
 export default async function Page() {
   return (
     <>
-      <h1>Profile Archetypes</h1>
+      <h1>{profileArchetypesPage.title}</h1>
 
       <section>
         <p>
@@ -33,13 +32,6 @@ export default async function Page() {
         </p>
 
         <h3 id="meq">MEQ (Marine equivalent)</h3>
-
-        <Image
-          src={intercessors}
-          alt="A squad of Space Marine Intercessors."
-          className="picture profile-img object-[0%_70%]"
-          loading="eager"
-        />
 
         <p className="lead text-center">T4 Sv3+ W2</p>
 
@@ -70,12 +62,6 @@ export default async function Page() {
         </p>
 
         <h3 id="teq">TEQ (Terminator equivalent)</h3>
-
-        <Image
-          src={terminators}
-          alt="A squad of Space Marine Terminators."
-          className="picture profile-img object-[0%_57%]"
-        />
 
         <p className="lead text-center">T5 Sv2+/4++ W3</p>
 
@@ -111,12 +97,6 @@ export default async function Page() {
         </p>
 
         <h3 id="geq">GEQ (Guard Equivalent)</h3>
-
-        <Image
-          src={guardsmen}
-          alt="A squad of Imperial Guard Cadian Shock Troops."
-          className="picture profile-img object-[0%_28%]"
-        />
 
         <p className="lead text-center">T3 Sv5+ W1</p>
 
@@ -181,12 +161,6 @@ export default async function Page() {
         </ul>
 
         <h3 id="vehicles-and-monsters">Vehicles and Monsters</h3>
-
-        <Image
-          src={rhino}
-          alt="A Space Marine Rhino transport vehicle."
-          className="picture profile-img object-[0%_40%]"
-        />
 
         <p>
           Vehicle and monster profiles vary much more than infantry ones.

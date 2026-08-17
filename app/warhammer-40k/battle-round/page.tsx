@@ -1,20 +1,21 @@
-import Image from "next/image";
 import { FaCrosshairs } from "react-icons/fa";
 import { LuCrown } from "react-icons/lu";
 import { RiSwordLine } from "react-icons/ri";
 import { RxDoubleArrowUp } from "react-icons/rx";
 import { TbArrowBigUpLines } from "react-icons/tb";
 
-import movement from "@/app/assets/wh40k/move.webp";
-import pivot from "@/app/assets/wh40k/pivot.webp";
-import shooting from "@/app/assets/wh40k/shooting.webp";
+import { getPage } from "@/app/siteMap";
 
 import { BsFillDice6Fill } from "react-icons/bs";
+
+const battleRoundPage = getPage("/warhammer-40k/battle-round");
+
+export const metadata = battleRoundPage.metadata;
 
 export default async function Page() {
   return (
     <>
-      <h1>Battle Round</h1>
+      <h1>{battleRoundPage.title}</h1>
 
       <section>
         <p>
@@ -187,8 +188,6 @@ export default async function Page() {
           </li>
         </ol>
 
-        <Image src={movement} alt="Movement example" />
-
         <p className="example">
           For example, the bulky Heavy Intercessors can make a normal move up to
           5". If they declare an advance and roll a 6, they can{" "}
@@ -264,8 +263,6 @@ export default async function Page() {
           <strong>reduce their move by 2"</strong> every time they pivot, to
           prevent gaining extra distance through rotation tricks.
         </p>
-
-        <Image src={pivot} alt="Pivoting example" />
 
         <h3 id="transports">Transports</h3>
 
@@ -351,8 +348,6 @@ export default async function Page() {
             sight of an enemy.
           </li>
         </ul>
-
-        <Image src={shooting} alt="Shooting example" />
 
         <p>
           The important part is to{" "}
