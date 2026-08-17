@@ -38,6 +38,10 @@
   @apply flex gap-2 items-center;
 }
 
+@utility lead {
+  @apply font-semibold text-lg;
+}
+
 @layer base {
   body {
     background: var(--background);
@@ -91,11 +95,11 @@
     }
 
     h2 {
-      @apply text-2xl font-semibold pt-4;
+      @apply scroll-mt-16 text-2xl font-semibold pt-4;
     }
 
     h3 {
-      @apply text-xl font-medium;
+      @apply scroll-mt-16 text-xl font-medium;
     }
   }
 }

@@ -29,9 +29,9 @@ export const siteMap = {
   children: [
     {
       href: "/mortal-kombat",
-      title: "Mortal Kombat",
+      title: "Mortal Kombat Fundamentals",
       metadata: {
-        title: "Mortal Kombat",
+        title: "Mortal Kombat Fundamentals",
         description:
           "Learn the fundamentals, notation, and strategy of modern Mortal Kombat.",
       },
@@ -43,6 +43,24 @@ export const siteMap = {
             title: "Neutral",
             description:
               "Learn how neutral, spacing, footsies, zoning, pokes, and pressure work in modern Mortal Kombat.",
+          },
+        },
+      ],
+    },
+    {
+      href: "/mortal-kombat-1",
+      title: "Mortal Kombat 1",
+      metadata: {
+        title: "Mortal Kombat 1",
+        description: "Learn the mechanics and characters of Mortal Kombat 1.",
+      },
+      children: [
+        {
+          href: "/mortal-kombat-1/scorpion",
+          title: "Scorpion",
+          metadata: {
+            title: "Scorpion",
+            description: "Learn how Scorpion plays in Mortal Kombat 1.",
           },
         },
       ],
