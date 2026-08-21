@@ -2,6 +2,7 @@ import { getPage } from "@/app/siteMap";
 import Image from "next/image";
 import Link from "next/link";
 import Scorpion from "../../../public/mk1/scorpion.webp";
+import { GiSpearHook } from "react-icons/gi";
 
 const scorpionPage = getPage("/mortal-kombat-1/scorpion");
 const neutralPage = getPage("/mortal-kombat/neutral");
@@ -21,97 +22,135 @@ export default function Page() {
         />
 
         <p>
-          MK1's Scorpion is built around fundamentals, being neither an obvious
-          rushdown nor a zoning fighter. He{" "}
-          <strong>lacks complex mechanics</strong> and relies on clean{" "}
-          <Link href={`${neutralPage.href}#footsies`}>footsies</Link>,{" "}
-          <Link href={`${neutralPage.href}#whiff`}>whiff-punishes</Link>, and
-          strike/throw offense. Even though he has tools for all ranges, he is{" "}
-          <strong>most comfortable at mid-screen</strong>.
+          MK1's Scorpion <strong>lacks complex mechanics</strong> or stances. He
+          is built around clean{" "}
+          <Link href={`${neutralPage.href}#footsies`}>footsies</Link>,
+          conversions, and{" "}
+          <Link href={`${neutralPage.href}#whiff`}>whiff-punishes</Link>. He
+          lacks a true mix-up of his own and instead relies on basic
+          strike/throw offense.
         </p>
 
         <p>
-          As with other titles, Scorpion is perhaps the most{" "}
-          <strong>straightforward, begginer-friendly</strong> character, with
-          simple combo routes and mostly safe normals.
+          Although Scorpion has both close and long range tools, he feels{" "}
+          <strong>most comfortable mid-screen</strong>. Beginners tend to find
+          his reactive play and easy combo routes satisfying. He teaches
+          fundamentals and promotes a simple game plan.
         </p>
 
-        <h2 id="buttons">Key buttons</h2>
+        <blockquote>
+          Footsies &rarr; hit-confirm &rarr; combo &rarr; knockdown &rarr;
+          strike/throw &rarr; repeat.
+        </blockquote>
 
-        <h3 id="normals">Normals</h3>
-
-        <p>Get to know the following in practice mode.</p>
-
-        <p>
-          <strong>Standing 2</strong> is a safe, 10-frame, <em>disjointed</em>{" "}
-          High with surprisingly good reach (2-3 steps away). It's a good
-          mid-range interuption. Practice its span and doing{" "}
-          <strong>21 BF1</strong> Spear.
-        </p>
+        <h2 id="mid">Control mid, catch them as they move</h2>
 
         <p>
-          <strong>Standing 1</strong> is the fastest, 7-frame High with much
-          shorter reach, but <em>+2 on hit</em>. Practice hitting two in a row
-          against a reversal dummy as they retaliate. Or doing{" "}
-          <strong>1 backdash 2</strong>. It's also a viable anti-air if they are
-          on top of you.
+          <strong>Don't glue yourself to your foe.</strong> Scorpion has many
+          safe normals with good reach, some of which disjointed. Let's go
+          trough the key ones. Try the following in training mode.
         </p>
 
         <p>
-          <strong>Forward 3</strong> is an advacing, safe, 12-frame Mid - the
-          foundation of your grounded offense. It checks ducking foes and sets
-          up Scorpion's optimal combos with the <strong>F32</strong> launcher.
-          Practice doing 3 <strong>F32</strong>s in a row (optimal damage, but
-          if you can't 2 are enough). Also, <strong>F3 into throw</strong>,{" "}
-          <strong>F3 DB2</strong>.
+          <strong>Standing 2</strong> is a safe, <em>disjointed</em> High with
+          excellent reach for a 10-frame punch. Practice connecting a hit at its
+          edge and try to stay there.
         </p>
 
         <p>
-          <strong>Back 3</strong> is a very unique move - a <em>disjointed</em>,
-          21-frame, -19 on block, 2-hit Mid-Low, where the first hit is
-          cancellable. It's terrible on paper, but it reaches very far (jump +
-          dash) and has long active frames (17). It's a long-range commitment
-          move that requires a good read. Practice cancelling into a conversion{" "}
-          <strong>B3 F1</strong> Spear (or any BF special), or{" "}
-          <strong>B3 xDB3</strong> (buffers the enhanced teleport so the
-          opponent has less chance to meet it with a poke).{" "}
-          <em>Don't try it up close!</em>
+          <strong>Standing 1</strong> is a faster, safe, 7-frame High with much
+          shorter reach, but <em>+2 on block</em>. It doesn't offer much frame
+          advantage, but it can give you some breathing room up close.
         </p>
 
         <p>
-          <strong>Back 2</strong> is an optimal, 9-frame anti-air because of
-          it's good reach. It can also be cancelled in the same manner as{" "}
-          <strong>Back 3</strong> for a full conversion out of a poorly timed
-          opponent's jump-in. Practice with a forward jumping dummy to do{" "}
-          <strong>B2 F1</strong>, or <strong>B2 F2</strong>.
+          <strong>Forward 3</strong> is an advacing, safe, 12-frame Mid. It's
+          your primary check for ducking foes and oki, and it leads to your main
+          launcher.
+        </p>
+
+        <p>
+          <strong>Back 2</strong> is your optimal anti-air. It's quick
+          (9-frames), makes Scorpion duck and reaches far enough. It can be
+          shortcut canceled into any back-forward special, for example{" "}
+          <strong>B2 F1</strong> cancels into spear on hit for a full combo out
+          of a poorly timed jump-in.
+        </p>
+
+        <p>
+          <strong>Back 3</strong> is very unique. It's one of Scorpion's few
+          slow, and unsafe normals - a <em>disjointed</em>, 21-frame, -19 on
+          block, 2-hit Mid-Low, where the first hit is cancellable. It's
+          terrible on paper, but it reaches very far and has long active frames
+          (17). It's a long-range commitment that plays a role in conditioning,
+          can be shotcut cancelled like <strong>B2</strong> and requires a good
+          read. <em>Don't try it up close!</em>
+        </p>
+
+        <h3 id="pokes">Footsies into pokes</h3>
+
+        <ul>
+          <li>
+            Are they aproaching? &rarr; <strong>Standing 2</strong> at about 2-3
+            steps away
+          </li>
+
+          <li>
+            Are they outside <strong>Standing 2</strong>? &rarr;{" "}
+            <strong>Back 3</strong>
+          </li>
+
+          <li>
+            Are they jumping in? &rarr; <strong>Back 2</strong>
+          </li>
+
+          <li>
+            Are they jumping over you? &rarr; <strong>Standing 1/Down 1</strong>{" "}
+            as they land
+          </li>
+
+          <li>
+            Do they keep ducking under your Highs? &rarr; <strong>F3</strong>
+          </li>
+
+          <li>
+            Are they in your face? &rarr;{" "}
+            <strong>
+              Standing 1 into another 1 / 1 backdash 2 / 1 into throw
+            </strong>
+          </li>
+        </ul>
+
+        <h3 id="spear">
+          The Spear is not a zoning tool <GiSpearHook />
+        </h3>
+
+        <p>
+          Scorpion's signature Spear <strong>BF1</strong> is an unsafe,
+          17-frame, high projectile, which stuns the target on hit and restands
+          them next to you. A second spear in the same combo will knock them
+          down. It controls a lot of space, but can easily be ducked under,
+          jumped over or teleported around. Using it consistently at some
+          distance will result in a punish.
+        </p>
+
+        <p>
+          Instead, try to catch them mid-step. The Spear is great when they dash
+          forward, jump, or setup some buff.
+        </p>
+
+        <p>
+          It's also an <strong>outstanding combo extender</strong> as it reduces
+          the timing and spacing factors. Because it can extend only once per
+          combo, it's important to know if your current route uses Spear early
+          or late. More on that bellow.
         </p>
       </section>
 
       <section>
-        <h2 id="mid">Control mid, punish whiffs, win neutral</h2>
+        <h2 id="condition">Condition, catch and confirm</h2>
 
-        <p>
-          A good beginner's starting point is to stay at the edge of{" "}
-          <strong>Standing 2</strong>'s reach and check the opponent when they
-          approach.
-        </p>
-
-        <p>
-          If they like to stay in your face, rely on the quick{" "}
-          <strong>Standing 1</strong> with what you practiced above (
-          <strong>1 into 1</strong> punish a folow-up,{" "}
-          <strong>1 into throw</strong> to punish blocking).
-        </p>
-
-        <h3 id="conditioning">Conditioning</h3>
-
-        <p>
-          Once an opponent has tasted <strong>B3</strong>'s reach, they
-          anticipate it at a certain range and start low blocking or jumping
-          preemptively. You can meet a poor jump-in with <strong>B2</strong>, or
-          do a <strong>B3</strong> into a low blocker, then enhance teleport{" "}
-          <strong>xDB3</strong> (quick and safe).
-        </p>
+        <p></p>
 
         <h3 id="anti-air">Anti-air hierarchy</h3>
 
