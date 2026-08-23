@@ -42,6 +42,14 @@
   @apply font-semibold text-lg;
 }
 
+@utility example {
+  @apply text-sm opacity-80 italic;
+
+  strong {
+    @apply font-semibold;
+  }
+}
+
 @layer base {
   body {
     background: var(--background);
