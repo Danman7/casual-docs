@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Scorpion from "../../../public/mk1/scorpion.webp";
 import { GiSpearHook } from "react-icons/gi";
+import { Badge } from "@/app/ui/Badge";
+import { FaHandPointRight, FaMagnifyingGlass } from "react-icons/fa6";
 
 const scorpionPage = getPage("/mortal-kombat-1/scorpion");
 const neutralPage = getPage("/mortal-kombat/neutral");
@@ -54,20 +56,25 @@ export default function Page() {
         </p>
 
         <p>
+          <Badge isPrimary>
+            <FaHandPointRight /> Main Poke
+          </Badge>{" "}
           <strong>Standing 2</strong> is a safe, <em>disjointed</em> High with
-          excellent reach for a 10-frame punch. This is{" "}
-          <em>your most consistent mid-range poke.</em>
+          excellent reach for a 10-frame punch.
         </p>
 
         <p>
+          <Badge>
+            <FaHandPointRight /> Quick Poke
+          </Badge>{" "}
           <strong>Standing 1</strong> is <em>your fastest</em> 7-frames,
           shortest, safe, <em>+2 on block</em> High punch.
         </p>
 
         <p>
-          <strong>Forward 3</strong> is a safe, advancing, 12-frame Mid. It's a
-          bit slower, doesn't reach as far, but still covers good ground and
-          handles crouching foes.
+          <Badge>Forward Mid</Badge> <strong>Forward 3</strong> is a safe,
+          advancing, 12-frame Mid. It's a bit slower, doesn't reach as far, but
+          still covers good ground and handles crouching foes.
         </p>
 
         <p>
@@ -79,8 +86,11 @@ export default function Page() {
         </p>
 
         <p className="example">
-          For example, <strong>B2 &rarr; F1</strong> cancels into a Spear,
-          allowing you to continue punishment if it connects.
+          <Badge>
+            <FaMagnifyingGlass /> Example
+          </Badge>{" "}
+          <strong>B2 &rarr; F1</strong> cancels into a Spear, allowing you to
+          continue punishment if it connects.
         </p>
 
         <p>
