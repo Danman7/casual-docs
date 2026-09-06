@@ -5,7 +5,7 @@ export const Badge: React.FC<PropsWithChildren<{ isPrimary?: boolean }>> = ({
   isPrimary,
 }) => (
   <span
-    className={`inline-flex items-center align-middle gap-[0.25em] text-[0.8em] text-background rounded ${isPrimary ? "bg-primary" : "bg-foreground"} px-[0.5em] font-medium`}
+    className={`inline-flex items-center gap-1 text-xs text-background rounded shadow-sm ${isPrimary ? "bg-primary" : "bg-foreground"} px-1.5 py-0.5 font-medium`}
   >
     {children}
   </span>

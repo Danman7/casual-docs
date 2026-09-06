@@ -42,14 +42,6 @@
   @apply font-semibold text-lg;
 }
 
-@utility example {
-  @apply text-sm opacity-85 italic;
-
-  strong {
-    @apply font-semibold;
-  }
-}
-
 @layer base {
   body {
     background: var(--background);
@@ -59,6 +51,10 @@
 
   a {
     @apply hover:text-primary;
+  }
+
+  hr {
+    @apply opacity-10;
   }
 
   main {

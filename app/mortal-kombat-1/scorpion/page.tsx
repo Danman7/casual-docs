@@ -1,10 +1,12 @@
 import { getPage } from "@/app/siteMap";
+import { Badge } from "@/app/ui/Badge";
+import { Example } from "@/app/ui/Example";
 import Image from "next/image";
 import Link from "next/link";
-import Scorpion from "../../../public/mk1/scorpion.webp";
+import { FaAngleRight, FaCheck } from "react-icons/fa";
+import { FaHandPointRight, FaTurnUp } from "react-icons/fa6";
 import { GiSpearHook } from "react-icons/gi";
-import { Badge } from "@/app/ui/Badge";
-import { FaHandPointRight, FaMagnifyingGlass } from "react-icons/fa6";
+import Scorpion from "../../../public/mk1/scorpion.webp";
 
 const scorpionPage = getPage("/mortal-kombat-1/scorpion");
 const neutralPage = getPage("/mortal-kombat/neutral");
@@ -43,55 +45,70 @@ export default function Page() {
         <p>
           His tools are somewhat limited but direct, making him a{" "}
           <strong>decent choice for beginners</strong>. A guide for Scorpion can
-          be a guide for the game's basics. That being said, he can be
-          frequently seen in high-level matches as well. His kit is modular
-          enough for him to work well with most any Kameo, giving him style
-          flexibility.
+          be a guide for the game's basics. That being said, he can be seen in
+          high-level matches as well. His kit is modular enough for him to work
+          with any Kameo.
         </p>
 
-        <h2 id="mid">Key normals control mid</h2>
-        <p>
-          <strong>Don't glue yourself to your foe.</strong> Scorpion is inclined
-          to play better 2-3 steps away.
-        </p>
+        <h2 id="normals">Key normals control mid</h2>
+
+        <h3 id="standing-2">Standing 2 - primary whiff-punish family</h3>
+
+        <ul>
+          <li>
+            <Badge isPrimary>
+              <FaHandPointRight /> Main poke
+            </Badge>{" "}
+            <strong>2</strong> is a safe, 10-frame, disjointed <em>High</em>{" "}
+            with <strong>excellent reach</strong> for the speed.
+          </li>
+
+          <li>
+            <Badge isPrimary>
+              <FaCheck /> Main hit-confirm
+            </Badge>{" "}
+            <strong>21</strong> is the safe <em>High-Mid</em> continuation.
+          </li>
+
+          <li>
+            <strong>214</strong> is the <em>High-Mid-Mid</em> full string
+          </li>
+        </ul>
+
+        <h3 id="standing-1">Standing 1 - quick plus frames</h3>
+
+        <ul>
+          <li>
+            <Badge>
+              <FaHandPointRight /> Fastest Poke
+            </Badge>{" "}
+            <strong>Standing 1</strong> is a 7-frame, short, safe,{" "}
+            <em>+2 on block</em> High.
+          </li>
+        </ul>
 
         <p>
-          <Badge isPrimary>
-            <FaHandPointRight /> Main Poke
+          <Badge>
+            <FaAngleRight />
+            Advancing Mid
           </Badge>{" "}
-          <strong>Standing 2</strong> is a safe, <em>disjointed</em> High with
-          excellent reach for a 10-frame punch.
+          <strong>Forward 3</strong> is a safe, advancing, 12-frame Mid for
+          proactively checking ducking foes.
         </p>
 
         <p>
           <Badge>
-            <FaHandPointRight /> Quick Poke
+            <FaTurnUp /> Best anti-air
           </Badge>{" "}
-          <strong>Standing 1</strong> is <em>your fastest</em> 7-frames,
-          shortest, safe, <em>+2 on block</em> High punch.
-        </p>
-
-        <p>
-          <Badge>Forward Mid</Badge> <strong>Forward 3</strong> is a safe,
-          advancing, 12-frame Mid. It's a bit slower, doesn't reach as far, but
-          still covers good ground and handles crouching foes.
-        </p>
-
-        <p>
           <strong>Back 2</strong> is a 9-frame, disjointed High, that is also
-          your <em>essential anti-air</em>. <em>Practice it</em> with a jump-in
-          dummy <em>early</em>. It can be shortcut canceled into any
-          back-forward special, which means you can convert a failed jump-in
-          into a full combo.
+          your <em>essential anti-air</em>. It can be shortcut canceled into any
+          back-forward special.
         </p>
 
-        <p className="example">
-          <Badge>
-            <FaMagnifyingGlass /> Example
-          </Badge>{" "}
+        <Example>
           <strong>B2 &rarr; F1</strong> cancels into a Spear, allowing you to
-          continue punishment if it connects.
-        </p>
+          convert into a combo out of a failed jump-in.
+        </Example>
 
         <p>
           <strong>Back 3</strong> a pretty unique, disjointed, slow and unsafe
@@ -105,6 +122,11 @@ export default function Page() {
 
       <section>
         <h2 id="confirm">React and confirm</h2>
+
+        <p>
+          <strong>Don't glue yourself to your foe.</strong> Scorpion plays
+          better 2-3 steps away.
+        </p>
 
         <p>
           A <em>good start</em> is to{" "}

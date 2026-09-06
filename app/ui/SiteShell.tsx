@@ -12,10 +12,7 @@ import {
 import { GiNotebook } from "react-icons/gi";
 import { IoClose, IoMenu } from "react-icons/io5";
 
-import {
-  getNavigationPages,
-  type NavigationPage,
-} from "@/app/siteMap";
+import { getNavigationPages, type NavigationPage } from "@/app/siteMap";
 
 const SIDEBAR_ID = "site-navigation";
 
@@ -98,7 +95,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
       onKeyDown={handleKeyDown}
     >
       <div className="site-content">
-        <header className="center-wrapper flex items-center justify-between shadow p-2 gap-4 text-bold-foreground sticky top-0 bg-surface z-50 font-bold text-xl">
+        <header className="center-wrapper flex items-center justify-between shadow-md p-2 gap-4 text-bold-foreground sticky top-0 bg-surface z-50 font-bold text-xl">
           <Link href="/" className="icon-text" onClick={() => closeSidebar()}>
             <GiNotebook /> Casual Docs
           </Link>
