@@ -1,11 +1,15 @@
 import { getPage } from "@/app/siteMap";
 import { Badge } from "@/app/ui/Badge";
-import { Example } from "@/app/ui/Example";
 import Image from "next/image";
 import Link from "next/link";
-import { FaAngleRight, FaCheck } from "react-icons/fa";
-import { FaHandPointRight, FaTurnUp } from "react-icons/fa6";
-import { GiSpearHook } from "react-icons/gi";
+import { CgArrowLongRightR } from "react-icons/cg";
+import { FaCheck } from "react-icons/fa";
+import { FaHandPointRight, FaStar, FaTurnUp } from "react-icons/fa6";
+import { GiArrowDunk, GiSpearHook } from "react-icons/gi";
+import { MdCallSplit } from "react-icons/md";
+import { RiArrowGoForwardFill } from "react-icons/ri";
+import { RxRulerHorizontal } from "react-icons/rx";
+import { TbArrowsSplit } from "react-icons/tb";
 import Scorpion from "../../../public/mk1/scorpion.webp";
 
 const scorpionPage = getPage("/mortal-kombat-1/scorpion");
@@ -43,187 +47,185 @@ export default function Page() {
         </p>
 
         <p>
-          His tools are somewhat limited but direct, making him a{" "}
-          <strong>decent choice for beginners</strong>. A guide for Scorpion can
-          be a guide for the game's basics. That being said, he can be seen in
-          high-level matches as well. His kit is modular enough for him to work
-          with any Kameo.
-        </p>
-
-        <h2 id="normals">Key normals control mid</h2>
-
-        <h3 id="standing-2">Standing 2 - primary whiff-punish family</h3>
-
-        <ul>
-          <li>
-            <Badge isPrimary>
-              <FaHandPointRight /> Main poke
-            </Badge>{" "}
-            <strong>2</strong> is a safe, 10-frame, disjointed <em>High</em>{" "}
-            with <strong>excellent reach</strong> for the speed.
-          </li>
-
-          <li>
-            <Badge isPrimary>
-              <FaCheck /> Main hit-confirm
-            </Badge>{" "}
-            <strong>21</strong> is the safe <em>High-Mid</em> continuation.
-          </li>
-
-          <li>
-            <strong>214</strong> is the <em>High-Mid-Mid</em> full string
-          </li>
-        </ul>
-
-        <h3 id="standing-1">Standing 1 - quick plus frames</h3>
-
-        <ul>
-          <li>
-            <Badge>
-              <FaHandPointRight /> Fastest Poke
-            </Badge>{" "}
-            <strong>Standing 1</strong> is a 7-frame, short, safe,{" "}
-            <em>+2 on block</em> High.
-          </li>
-        </ul>
-
-        <p>
-          <Badge>
-            <FaAngleRight />
-            Advancing Mid
-          </Badge>{" "}
-          <strong>Forward 3</strong> is a safe, advancing, 12-frame Mid for
-          proactively checking ducking foes.
-        </p>
-
-        <p>
-          <Badge>
-            <FaTurnUp /> Best anti-air
-          </Badge>{" "}
-          <strong>Back 2</strong> is a 9-frame, disjointed High, that is also
-          your <em>essential anti-air</em>. It can be shortcut canceled into any
-          back-forward special.
-        </p>
-
-        <Example>
-          <strong>B2 &rarr; F1</strong> cancels into a Spear, allowing you to
-          convert into a combo out of a failed jump-in.
-        </Example>
-
-        <p>
-          <strong>Back 3</strong> a pretty unique, disjointed, slow and unsafe
-          2-hit, Mid-Low, where the first hit is cancellable into any special.
-          It's terrible on paper, but reaches very far, has long active frames
-          (17), and the Low attack conditions opponents to crouch-block or jump
-          preemptively. It's a commitment that that tends to trouble foes when
-          used after a good read.
+          His moves are mostly direct, having something for every basic
+          scenario, making him a <strong>safe choice for beginners</strong>. A
+          guide for Scorpion can be a guide for the game's basics. That being
+          said, he can be seen in high-level matches as well. His kit is modular
+          enough for him to work with any Kameo.
         </p>
       </section>
 
       <section>
-        <h2 id="confirm">React and confirm</h2>
+        <h2 id="reactive">
+          Plays well reactively <RiArrowGoForwardFill />
+        </h2>
 
         <p>
-          <strong>Don't glue yourself to your foe.</strong> Scorpion plays
-          better 2-3 steps away.
+          Scorpion has sufficient moves to convert almost any mistake into a
+          combo. Just <strong>don't glue yourself to your opponent</strong>. He
+          plays more coherently by staying a few steps away.
         </p>
 
         <p>
-          A <em>good start</em> is to{" "}
-          <em>
-            keep Scorpion at the edge of <strong>Standing 2</strong>'s range
-          </em>{" "}
-          and check the opponent as they come in. Use{" "}
-          <strong>Standing 1</strong> only if they are on top of you. Once you
-          get comfortable with the range and speed, start hit-confirming{" "}
-          <strong>12</strong> and <strong>21</strong>. <strong>21</strong> is
-          better because it reaches further and deals more damage. This is the
-          initial routine.
+          <Badge isPrimary>
+            <FaHandPointRight /> Main poke
+          </Badge>{" "}
+          <strong>Standing 2</strong> is a 10-frame, disjointed <em>High</em>{" "}
+          with <strong>good reach</strong> for its speed. Learn its range, then
+          keep Scorpion at the edge of it, and check foes as they come in.
         </p>
 
+        <p>
+          <Badge>
+            <FaCheck /> Main hit-confirm
+          </Badge>{" "}
+          <strong>2,1</strong> is the safe <em>Mid</em> continuation. If you're
+          going for damage, not probing, the routine is the following:
+        </p>
         <ul>
           <li>
-            <strong>21</strong> &rarr; they block &rarr;{" "}
-            <strong>you block</strong>
+            <strong>2,1</strong> &rarr; they block &rarr; you block, duck, or
+            disengage
           </li>
 
           <li>
-            <strong>21</strong> &rarr; they get hit &rarr; <strong>BF1</strong>{" "}
-            Spear &rarr; combo
+            <strong>2,1</strong> &rarr; they get hit &rarr; <strong>BF1</strong>{" "}
+            <GiSpearHook /> Spear &rarr; combo
           </li>
         </ul>
 
         <p>
-          The same works with <strong>B2</strong>, so practice{" "}
-          <strong>B2 &rarr; F1</strong> as well. While playing defensively, try
-          as much as you can to see your opponent's whiff before pressing{" "}
-          <strong>2</strong>.
+          <Badge isPrimary>
+            <FaTurnUp /> Main anti-air
+          </Badge>{" "}
+          <strong>Back 2</strong> is a 9-frame, disjointed <em>High</em>, with a
+          fair hitbox, that also makes Scorpion micro-duck. It much quicker and
+          safer as an anti-air than <strong>Forward 4</strong>. If they get hit,
+          you can immediattely connect a <GiSpearHook /> Spear, by just pressing{" "}
+          <strong>F1</strong> as it shortcut cancels:{" "}
+          <strong>B2 &rarr; F1</strong>.
         </p>
 
-        <h3 id="spear">
+        <p>
+          <Badge isPrimary>
+            <TbArrowsSplit />
+            Advancing Mid
+          </Badge>{" "}
+          <strong>Forward 3</strong> is a safe, advancing, 12-frame Mid. It's a
+          bit slower and shorter than <strong>Standing 2</strong>, but checks
+          ducking foes, and is one basis of your offense.
+        </p>
+      </section>
+
+      <section>
+        <h2 id="spear">
           The Spear is not a zoning tool <GiSpearHook />
-        </h3>
+        </h2>
 
         <p>
           Scorpion's signature Spear <strong>BF1</strong> is an unsafe,
-          17-frame, high projectile, which stuns the target on hit and restands
-          them next to you.{" "}
-          <em>A second spear in the same combo will knock them down</em>{" "}
-          instead. It controls a lot of space, but can easily be ducked under,
-          jumped over or teleported around.
+          17-frame, full-screen, High projectile, which stuns the target on hit
+          and restands them next to you. It's one of the simples combo
+          extensions in the game.{" "}
+          <em>
+            A second spear in the same combo will knock them down instead.
+          </em>
         </p>
 
         <p>
-          Use it inside a combo or try to catch them mid-step. It performs
-          poorly when they keep blocking or throwing projectiles, but works
-          great when they dash forward or jump in, which can be provoked.
-        </p>
-
-        <p className="example">
-          For example, throwing a deliberate <strong>Standing 1</strong> punch
-          into empty air at mid range, indicates a whiff and may trigger a
-          reaction in the opponent. <strong>1 &rarr; BF1</strong> is a cheap,
-          but legitimate way to make them dash into your Spear.
+          It controls a lot of space, but can easily be ducked under, jumped
+          over or teleported around. Using it predictably will not end well.
+          Employ it, primarily, inside a combo or try to catch them mid-step. It
+          works great when it intercepts a dash, jump, or unsafe cast. You can
+          try to provoke a reaction by throwing a quick punch into empty air
+          from afar, into a spear: <strong>1 &rarr; BF1</strong>.
         </p>
       </section>
 
       <section>
-        <h2 id="offense">A staggered offense</h2>
+        <h2 id="distance">
+          No gap is safe <RxRulerHorizontal />
+        </h2>
 
         <p>
-          On his own, Scorpion doesn't have a cancellable stranding Low or
-          Overhead. If you're the one attacking,{" "}
-          <em>start simple - mid or throw.</em>
+          Scorpion has tools for players that like to keep their distance,{" "}
+          <strong>provided they are used with restraint</strong>.
         </p>
 
         <p>
-          <strong>F3</strong> is the basis of a healthy offense out of a Mid.
+          <Badge>
+            <CgArrowLongRightR />
+            Long Tech
+          </Badge>{" "}
+          <strong>Back 3</strong> a pretty unique, disjointed, slow and unsafe
+          2-hit, Mid-Low, where the first hit is cancellable into any special.
+          It's <strong>terrible on paper, but reaches very far</strong>, and
+          says active for long.
         </p>
 
         <p>
-          <strong>F32</strong> is your <em>best launcher</em> and{" "}
-          <em>optimal combo starter</em>. It's <em>+61 on hit</em> with a jump
-          cancel, and <strong>can be chained up to 3 times</strong> for a
-          juggle. But, the second attack is High, so an educated opponent can
-          easily punish it. Caution is advised.
+          Unfamiliar players, don't expect Scorpion to throw a <em>Low</em> at
+          such a distance, and thend to start jumping or low-blocking
+          preemptively. The former works well with <strong>B2</strong> if they
+          develop a trend.
+        </p>
+      </section>
+
+      <section>
+        <h2 id="offense">
+          A staggered offense <MdCallSplit />
+        </h2>
+
+        <p>
+          On his own, Scorpion{" "}
+          <strong>
+            doesn't have a cancellable stranding <em>Low</em> or{" "}
+            <em>Overhead</em>
+          </strong>
+          . Without a Kameo he employs a traditional hit/throw mixup.
         </p>
 
         <p>
-          <strong>F34</strong> is the safe Mid-Mid that estabpshes respect. The
-          same educated opponent from above, expecting to counter a{" "}
-          <strong>F32</strong> or a <strong>Throw</strong> is now discouraged to
-          do so.
+          Simple is consistent - Mid, or throw, or complete. <strong>F3</strong>{" "}
+          is the foundation.
         </p>
 
         <p>
-          <strong>F3 &rarr; Throw</strong> is your mix-up for foes that keep
-          blocking.
+          <Badge isPrimary>
+            <GiArrowDunk />
+            Main launcher
+          </Badge>{" "}
+          <strong>F3,2</strong> is a <em>+61 on hit</em> string with a jump
+          cancel, that <strong>can be chained up to 3 times</strong> in a row
+          for a juggle. It's your <em>optimal combo starter</em> damage-wise,
+          but the second attack is High. An educated opponent can punish it with
+          a Low counter.
         </p>
 
         <p>
-          In due course, only checking with Mid will feel limited, so add{" "}
-          <strong>Standing 1</strong>. Start with a full <strong>122</strong>{" "}
-          (final hit is an Overhead), then stagger:
+          <Badge>
+            <FaStar /> Respect
+          </Badge>{" "}
+          <strong>F3,4</strong> a Mid-Mid instead, discouraging any Lows, and
+          conditioning the opponent to keep blocking.
+        </p>
+
+        <p>
+          After some regard has been established, you can start staggering{" "}
+          <strong>F3</strong> into a thorw, or a <strong>D1</strong>, or
+          something else. The <em>key idea</em> is to keep the other player
+          guessing are you going to throw, or complete the string, or delay.
+        </p>
+
+        <h3 id="standing-1">Plus-frames pressure</h3>
+
+        <p>In due course, only checking with Mid will become limited.</p>
+
+        <p>
+          <Badge>
+            <FaHandPointRight /> Quick poke
+          </Badge>{" "}
+          <strong>Standing 1</strong> is a 7-frame, +2 on hit, High jab.
         </p>
 
         <ul>
