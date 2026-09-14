@@ -4,12 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CgArrowLongRightR } from "react-icons/cg";
 import { FaCheck } from "react-icons/fa";
-import { FaHandPointRight, FaStar, FaTurnUp } from "react-icons/fa6";
-import { GiArrowDunk, GiSpearHook } from "react-icons/gi";
-import { MdCallSplit } from "react-icons/md";
-import { RiArrowGoForwardFill } from "react-icons/ri";
-import { RxRulerHorizontal } from "react-icons/rx";
-import { TbArrowsSplit } from "react-icons/tb";
+import { GiSpearHook } from "react-icons/gi";
 import Scorpion from "../../../public/mk1/scorpion.webp";
 
 const scorpionPage = getPage("/mortal-kombat-1/scorpion");
@@ -24,6 +19,7 @@ export default function Page() {
 
       <section>
         <Image
+          loading="eager"
           src={Scorpion}
           alt="Scorpion in Mortal Kombat 1"
           className="max-w-1/3 ml-4 float-right"
@@ -47,41 +43,71 @@ export default function Page() {
         </p>
 
         <p>
-          His moves are mostly direct, having something for every basic
-          scenario, making him a <strong>safe choice for beginners</strong>. A
-          guide for Scorpion can be a guide for the game's basics. That being
-          said, he can be seen in high-level matches as well. His kit is modular
-          enough for him to work with any Kameo.
+          His moves are mostly direct, having something for every root scenario,
+          making him a <strong>safe choice for beginners</strong>. A guide for
+          Scorpion can be a guide for the game's basics. That being said, he can
+          be seen in high-level matches as well. His kit is modular enough for
+          him to work with any Kameo.
         </p>
       </section>
 
       <section>
-        <h2 id="reactive">
-          Plays well reactively <RiArrowGoForwardFill />
-        </h2>
+        <h2 id="mid">Normals control the middle</h2>
 
         <p>
-          Scorpion has sufficient moves to convert almost any mistake into a
-          combo. Just <strong>don't glue yourself to your opponent</strong>. He
-          plays more coherently by staying a few steps away.
+          <strong>2</strong> is your <strong>main neutral button</strong>. It's
+          a safe, <em>disjointed</em> High, with a 10-frame start, but it's
+          central trait is it's <strong>surprising reach</strong> (about 2-3
+          steps away).
         </p>
 
         <p>
-          <Badge isPrimary>
-            <FaHandPointRight /> Main poke
-          </Badge>{" "}
-          <strong>Standing 2</strong> is a 10-frame, disjointed <em>High</em>{" "}
-          with <strong>good reach</strong> for its speed. Learn its range, then
-          keep Scorpion at the edge of it, and check foes as they come in.
+          <strong>1</strong> is your <strong>fastest</strong> (7f start),
+          shortest, safe High, that is also <strong>+2 on block</strong>.
         </p>
 
         <p>
-          <Badge>
-            <FaCheck /> Main hit-confirm
-          </Badge>{" "}
-          <strong>2,1</strong> is the safe <em>Mid</em> continuation. If you're
-          going for damage, not probing, the routine is the following:
+          <strong>F+3</strong> is a safe, 12f start,{" "}
+          <strong>advancing Mid</strong> - an offensive / get-up check.
         </p>
+
+        <p>
+          <strong>B+2</strong> is a safe, fast, (9f start), <em>disjointed</em>{" "}
+          High, with a hitbox that makes it a <strong>prime anti-air</strong>{" "}
+          move. It also makes Scorpion micro-duck, being quicker and more
+          practical than <strong>F+4</strong>.
+        </p>
+
+        <p>
+          <strong>B+3</strong> an unique, <em>disjointed</em>,{" "}
+          <strong>slow and unsafe</strong> 2-hit, Mid-Low, where{" "}
+          <strong>the first hit is cancellable</strong>. It's terrible on paper,
+          but reaches very far (jump + dash), and stays active for long.
+        </p>
+      </section>
+
+      <section>
+        <h2 id="specials">Specials to be used with restraint</h2>
+
+        <p>
+          <strong>B,F+1</strong> - the Spear - is an unsafe, 17f start,
+          full-screen, High projectile, which{" "}
+          <strong>stuns the target on hit and restands them next to you</strong>
+          .{" "}
+          <em>
+            A second spear in the same combo will knock them down instead.
+          </em>
+        </p>
+      </section>
+
+      <section>
+        <h2 id="react">Reactive play</h2>
+
+        <p>
+          Scorpion can play basic neutral, by staying at the edge of{" "}
+          <strong>2</strong> and checking foes at they come in:
+        </p>
+
         <ul>
           <li>
             <strong>2,1</strong> &rarr; they block &rarr; you block, duck, or
@@ -95,208 +121,250 @@ export default function Page() {
         </ul>
 
         <p>
-          <Badge isPrimary>
-            <FaTurnUp /> Main anti-air
-          </Badge>{" "}
-          <strong>Back 2</strong> is a 9-frame, disjointed <em>High</em>, with a
-          fair hitbox, that also makes Scorpion micro-duck. It much quicker and
-          safer as an anti-air than <strong>Forward 4</strong>. If they get hit,
-          you can immediattely connect a <GiSpearHook /> Spear, by just pressing{" "}
-          <strong>F1</strong> as it shortcut cancels:{" "}
-          <strong>B2 &rarr; F1</strong>.
-        </p>
-
-        <p>
-          <Badge isPrimary>
-            <TbArrowsSplit />
-            Advancing Mid
-          </Badge>{" "}
-          <strong>Forward 3</strong> is a safe, advancing, 12-frame Mid. It's a
-          bit slower and shorter than <strong>Standing 2</strong>, but checks
-          ducking foes, and is one basis of your offense.
+          <strong>The Spear is not a zoning tool.</strong> It controls a lot of
+          space, but can easily be ducked under, jumped over or teleported
+          around. Using it predictably will not end well. Employ it, primarily,
+          inside a combo or try to catch them mid-step. It works great when it
+          intercepts a dash, jump, or unsafe cast. You can try to provoke a
+          reaction by throwing a quick punch into empty air from afar, into a
+          spear: <strong>1 &rarr; BF1</strong>.
         </p>
       </section>
 
       <section>
-        <h2 id="spear">
-          The Spear is not a zoning tool <GiSpearHook />
-        </h2>
+        <h2 id="offense">A staggered offense</h2>
 
         <p>
-          Scorpion's signature Spear <strong>BF1</strong> is an unsafe,
-          17-frame, full-screen, High projectile, which stuns the target on hit
-          and restands them next to you. It's one of the simples combo
-          extensions in the game.{" "}
-          <em>
-            A second spear in the same combo will knock them down instead.
-          </em>
+          Successful aggression is about keeping the other player guessing.
+          Without a standing Overhead or Low cancel on his own, Scorpion's
+          offense is a bit narrow.
         </p>
 
         <p>
-          It controls a lot of space, but can easily be ducked under, jumped
-          over or teleported around. Using it predictably will not end well.
-          Employ it, primarily, inside a combo or try to catch them mid-step. It
-          works great when it intercepts a dash, jump, or unsafe cast. You can
-          try to provoke a reaction by throwing a quick punch into empty air
-          from afar, into a spear: <strong>1 &rarr; BF1</strong>.
-        </p>
-      </section>
-
-      <section>
-        <h2 id="distance">
-          No gap is safe <RxRulerHorizontal />
-        </h2>
-
-        <p>
-          Scorpion has tools for players that like to keep their distance,{" "}
-          <strong>provided they are used with restraint</strong>.
+          <em>Hit or throw</em> is the basic mix-up. Mids are the safest hits.
+          Hence, <strong>F+3</strong> is the natural basis.
         </p>
 
         <p>
-          <Badge>
-            <CgArrowLongRightR />
-            Long Tech
-          </Badge>{" "}
-          <strong>Back 3</strong> a pretty unique, disjointed, slow and unsafe
-          2-hit, Mid-Low, where the first hit is cancellable into any special.
-          It's <strong>terrible on paper, but reaches very far</strong>, and
-          says active for long.
+          <strong>F+3,2</strong> is your <strong>best launcher</strong> and{" "}
+          <strong>optimal combo starter</strong> damage-wise. It starts faster
+          and provides better advantage on hit than <strong>F+4</strong>. It
+          also can be <strong>repeated up to 3 times</strong> for a juggle. An
+          issue is the second hit, which is a High, and can be countered from a
+          crouch.
         </p>
 
         <p>
-          Unfamiliar players, don't expect Scorpion to throw a <em>Low</em> at
-          such a distance, and thend to start jumping or low-blocking
-          preemptively. The former works well with <strong>B2</strong> if they
-          develop a trend.
-        </p>
-      </section>
-
-      <section>
-        <h2 id="offense">
-          A staggered offense <MdCallSplit />
-        </h2>
-
-        <p>
-          On his own, Scorpion{" "}
-          <strong>
-            doesn't have a cancellable stranding <em>Low</em> or{" "}
-            <em>Overhead</em>
-          </strong>
-          . Without a Kameo he employs a traditional hit/throw mixup.
+          <strong>F+3,4</strong> ends with a knockback Mid instead. It can't be
+          cancelled, but <strong>establishes respect</strong>, discouraging
+          crouching counters.
         </p>
 
         <p>
-          Simple is consistent - Mid, or throw, or complete. <strong>F3</strong>{" "}
-          is the foundation.
+          Respect for <strong>F+3,2</strong> and <strong>F+3,4</strong> opens
+          the door for <strong>F+3</strong> staggers:{" "}
+          <strong>F+3 &rarr; Throw / D+1 / backdash</strong>.
         </p>
 
         <p>
-          <Badge isPrimary>
-            <GiArrowDunk />
-            Main launcher
-          </Badge>{" "}
-          <strong>F3,2</strong> is a <em>+61 on hit</em> string with a jump
-          cancel, that <strong>can be chained up to 3 times</strong> in a row
-          for a juggle. It's your <em>optimal combo starter</em> damage-wise,
-          but the second attack is High. An educated opponent can punish it with
-          a Low counter.
-        </p>
-
-        <p>
-          <Badge>
-            <FaStar /> Respect
-          </Badge>{" "}
-          <strong>F3,4</strong> a Mid-Mid instead, discouraging any Lows, and
-          conditioning the opponent to keep blocking.
-        </p>
-
-        <p>
-          After some regard has been established, you can start staggering{" "}
-          <strong>F3</strong> into a thorw, or a <strong>D1</strong>, or
-          something else. The <em>key idea</em> is to keep the other player
-          guessing are you going to throw, or complete the string, or delay.
-        </p>
-
-        <h3 id="standing-1">Plus-frames pressure</h3>
-
-        <p>In due course, only checking with Mid will become limited.</p>
-
-        <p>
-          <Badge>
-            <FaHandPointRight /> Quick poke
-          </Badge>{" "}
-          <strong>Standing 1</strong> is a 7-frame, +2 on hit, High jab.
+          Of course, only probing with <strong>F+3</strong> is limited.{" "}
+          <strong>1,2,2</strong> ends with an Overhead, bating an up block. It
+          also starts faster and adds additional staggers. <strong>1</strong>'s
+          +2 on block is not enough for a proper frame trap, yet it can spice up
+          the mix if you're already close:
         </p>
 
         <ul>
           <li>
-            <strong>1 &rarr; 1</strong> if you can hit the 2 frame window.
+            <strong>1</strong> &rarr; they keep blocking &rarr;{" "}
+            <strong>Throw</strong>
           </li>
 
           <li>
-            <strong>1/12 &rarr; block/throw/D1</strong>
+            <strong>1</strong> &rarr; they tend to counter High &rarr;{" "}
+            <strong>D+1</strong>
           </li>
 
           <li>
-            <strong>1 &rarr; back dash &rarr; 2</strong>
+            <strong>1</strong> &rarr; they tend to counter Mid &rarr;{" "}
+            <strong>backdash &rarr; 2</strong>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 id="combos">Convert almost any whiff</h2>
+
+        <p>Scorpion can always combo out of the following:</p>
+
+        <ul>
+          <li>
+            <strong>1,2</strong> is fast and short;
+          </li>
+
+          <li>
+            <strong>2,1</strong> is optimal from 2-3 steps away;
+          </li>
+
+          <li>
+            <strong>F+3</strong> is just a bit slower and shorter, but hits Mid
+            and can launch with <strong>F+3,2</strong>;
+          </li>
+
+          <li>
+            <strong>B+3</strong> can surprise from far away, but's it's slow and
+            unsafe;
+          </li>
+
+          <li>
+            <strong>B+2</strong> can interupt jump-ins, but{" "}
+            <strong>it counts as a juggle</strong>, thus 3x{" "}
+            <strong>F+3,2</strong> will not work.
           </li>
         </ul>
 
         <p>
-          Your opponent becomes unsure weather you'll continue, throw, or
-          disengage. Don't automatically feel safe because you're +2 on block.
-          Mix it up.
+          <strong>2,1</strong> has the balance between reach, speed and damage.
+          From there you only really need 3-4 routes.{" "}
+          <strong>Go for consisteny, not max damage.</strong>
+        </p>
+
+        <p>
+          <strong>Starter &rarr; B,F+1 &rarr; 3,3,3 &rarr; B,F+2</strong>
+          <br />
+          <em>217-227 DMG</em>
+          <br /> A painless, basic route just to get you started.
+        </p>
+
+        <p>
+          <strong>
+            Starter &rarr; B,F+1 &rarr; (F3,2)<sup>x3</sup> &rarr; F3,4 &rarr;
+            B,F+2
+          </strong>
+          <br />
+          <em>332-349 DMG</em>
+          <br /> A meterless bread-n-butter (BnB) variation, that leans on the
+          three juggles for simplicity. You will have enough height after the
+          third launch for the <strong>F3,4</strong> and the ending Charge is a
+          simple sequence to end on.
+        </p>
+
+        <p>
+          One effective way to extend via meter is the enhanced air Kyo Snag.
+          Practice{" "}
+          <strong>F3,2 &rarr; jump &rarr; air 1,2 &rarr; air D,B+2 EX</strong>.
+          Then try the following.
+        </p>
+
+        <p>
+          <strong>
+            Starter &rarr; B,F+1 &rarr; (F3,2)<sup>x2</sup> &rarr; jump &rarr;
+            air 1,2 &rarr; air D,B+2 EX &rarr; delayed air 1,1,1 &rarr; air
+            D,B+2
+          </strong>
+          <br />
+          <em>367-385 DMG, 1 bar</em>
+          <br />
+          This is how the BnB from above can be given an extra bite. Three
+          juggles will never provide the heigh to combo in the air. It's two
+          juggles into the jump. The <strong>delayed air 1,1,1</strong> has to
+          be executed close to the ground, for the opponent to bounce into the
+          final not enahced <strong>D,B+2</strong>.
+        </p>
+
+        <p>
+          <strong>
+            Starter &rarr; B,F+1 &rarr; (F3,2)<sup>x2</sup> &rarr; jump &rarr;
+            air 1,2 &rarr; (air D,B+2 EX &rarr; air 4)<sup>x3</sup> &rarr; BF2
+          </strong>
+          <br /> <em>407-417 DMG, 3 bars</em>
+          <br />
+          An end-of-the-round only method of abusing the air extension into
+          30-40 more damage. The repetition is simple, but the timing is tight
+          and having no resource afterwards is risky.
+        </p>
+
+        <p>
+          All the routes above are <strong>Starter &rarr; Spear</strong>,
+          because that is the most consistent, straightforward way to start a
+          combo with Scorpion. But if you manage to catch a whiff with the
+          launcher instead, and hold on the Spear for later, you can do more
+          damage.
+        </p>
+
+        <p>
+          <strong>
+            (F3,2)<sup>x3</sup> &rarr; 4 &rarr; B,F+1 &rarr; 3,3 &rarr; D,B+2
+          </strong>
+          <br />
+          <em>365 DMG</em>
+          <br />
+          Straight juggles into a kick into a Spear. Here a{" "}
+          <strong>3,3,3</strong> will not produce enough height for a Charge.
+          Same for the following route. So you end with two kicks into a Twisted
+          Kyo. This is your <em>late Spear BnB</em>.
+        </p>
+
+        <p>
+          <strong>
+            (F3,2)<sup>x2</sup> &rarr; jump &rarr; air 1,2 &rarr; air D,B+2 EX
+            &rarr; delayed air 1,1,1 &rarr; land &rarr; B,F+1 &rarr; 3,3 &rarr;
+            DB2
+          </strong>
+          <br />
+          <em>407 DMG, 1 bar</em>
+          <br />
+          You can use air extension in much the same manner as the other combos
+          above. But if you didn't use up your Spear early, you can do the
+          close-to-the-ground <strong>1,1,1</strong>, land, and throw one
+          afterwards. You can press <strong>B,F+1</strong> even before landing
+          and it should execute.
+        </p>
+
+        <p>
+          <strong>air 1,2 &rarr; B,F+1 &rarr; </strong>
+          <br />
+          <em>354 DMG</em>
+          <br />
+          An air-to-air route.
         </p>
       </section>
 
       <section>
-        <h2 id="convert">Convert almost any clean hit</h2>
-        <p>
-          <strong>Train hit confirmation first</strong>. Only then think about
-          combos. At that point,{" "}
-          <strong>go for consistency, not max damage</strong>. There are many
-          routes. You only need to learn 3 or 4.
-        </p>
-        <p>
-          The Spear is limited to one per combo, thus you have{" "}
-          <em>early and late Spear routes</em>.
-        </p>
-
-        <h3 id="early">Most conversions will be Spear early</h3>
+        <h2 id="kameos">Mix-ups, throw and armor combos with Kameos</h2>
 
         <p>
-          It's simply easier to start out of <strong>12</strong>,{" "}
-          <strong>21</strong>, <strong>F3</strong>, or <strong>B2</strong>{" "}
-          anti-air, into Spear. They are all replaceable starters depending on
-          the situation. Scorpion has a straightforward combo progression.
+          Scorpion can work with mostly any Kameo. Here are just a few
+          suggestions. You should explore futher.
         </p>
 
         <p>
-          <strong>12/21/F3/B2 &rarr; BF1 &rarr; 333 &rarr; BF2</strong>{" "}
-          <em>(217 DMG)</em> is a beginner's combo that completes the basic
-          hit-confirm into Spear route. <strong>333 BF2</strong> ender is simple
-          and switches sides. It can be replaced with <strong>33 DB2</strong> to
-          knockdown next to you, but for less damage.
+          <strong>Mavado</strong> is a good all-around buff for Scorpion. Most
+          of his moves activate only at the right time, making his a safe
+          beginner's choice.
         </p>
 
-        <p>
-          <strong>
-            12/21/F3/B2 &rarr; BF1 &rarr; F32 &rarr; F32 &rarr; F32 &rarr; 4
-            &rarr; BF2
-          </strong>{" "}
-          <em>(318 DMG)</em>. Juggling with <strong>F32</strong> paves the way
-          forward.
-        </p>
+        <ul>
+          <li>
+            Knockback (respect) strings like <strong>F3,4</strong> and{" "}
+            <strong>2,1,4</strong> become combo starters with{" "}
+            <strong>FK</strong> -{" "}
+            <strong>
+              F3,4 &rarr; FK &rarr; F3,2 &rarr; 4 &rarr; BF1 &rarr; 3,3 &rarr;
+              DB2
+            </strong>{" "}
+            for <em>332 DMG</em>.
+          </li>
 
-        <p>
-          <strong>
-            12/21/F3/B2 &rarr; BF1 &rarr; F32 &rarr; F32 &rarr; F32 &rarr; F34
-            &rarr; BF2
-          </strong>{" "}
-          <em>(342 DMG)</em> is your{" "}
-          <em>optimal meterless bread-n-butter route.</em> It's all you need to
-          be consistent in online matches.
-        </p>
+          <li>
+            Access to Throw combos -{" "}
+            <strong>
+              Throw &rarr; delayed K &rarr; (F3,2)<sup>x2</sup> &rarr; 4 &rarr;
+              BF1 &rarr; 3,3 &rarr; DB2
+            </strong>{" "}
+            <em>220 DMG</em>
+          </li>
+        </ul>
       </section>
     </>
   );

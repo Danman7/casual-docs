@@ -6,6 +6,7 @@
   --bold-foreground: var(--color-neutral-800);
   --surface: var(--color-neutral-100);
   --primary: var(--color-orange-700);
+  --green: var(--color-green-600);
 }
 
 @theme inline {
