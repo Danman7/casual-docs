@@ -1,10 +1,6 @@
 import { getPage } from "@/app/siteMap";
-import { Badge } from "@/app/ui/Badge";
 import Image from "next/image";
 import Link from "next/link";
-import { CgArrowLongRightR } from "react-icons/cg";
-import { FaCheck } from "react-icons/fa";
-import { GiSpearHook } from "react-icons/gi";
 import Scorpion from "../../../public/mk1/scorpion.webp";
 
 const scorpionPage = getPage("/mortal-kombat-1/scorpion");
@@ -52,61 +48,132 @@ export default function Page() {
       </section>
 
       <section>
-        <h2 id="mid">Normals control the middle</h2>
+        <h2 id="tools">Main tools</h2>
+        <h3 id="normals">Normals</h3>
+        <p>
+          <strong>[1]</strong> is the short and fast, 7-frame,{" "}
+          <strong>+2 on block</strong>, High. It's not enough for proper frame
+          traps, but good for staggers and quick checks.
+        </p>
+        <p>
+          <strong>[1,2]</strong> safely hit-confirms <strong>[1]</strong> into a
+          special cancel.
+        </p>
+        <p>
+          <strong>[1,2,2]</strong> ends in an Overhead, handling a crouching
+          defense, and baiting an up-block. The last point creates good stagger
+          opportunities: <strong>[1,2,2]</strong> once or twice, then{" "}
+          <strong>[1 &rarr; Throw / D1 / Backdash &rarr; 2]</strong>.
+        </p>
+        <hr />
+        <p>
+          <strong>[2]</strong> is a 10-frame, -2 on block, <em>disjointed</em>{" "}
+          High, that <strong>reaches a few steps away</strong>. That's very
+          practical for whiff-punishment and checking approaching foes, making
+          it a <strong>key neutral resource</strong>.
+        </p>
+        <p>
+          <strong>[2,1]</strong> continues into a Mid, reaching further and
+          dealing more damage than <strong>[1,2]</strong>, for a{" "}
+          <strong>principal hit-confirm</strong> into a Spear.
+        </p>
+        <hr />
+        <p>
+          <strong>[B+2]</strong>'s 9-frame start, 0 on block, and excellent
+          upwards reach, form the <strong>prime anti-air</strong> move. It can't
+          be jump cancelled on hit, but it shortcut cancels into any B,F special
+          without pressing back a second time: <strong>[B+2 &rarr; F+1]</strong>
+          . This gives it superb conversion out of a failed jump-in.
+        </p>
+        <p>
+          <strong>[F+4]</strong> launches higher, with an actual jump cancel,
+          but is much slower, less safe, and less practical.
+        </p>
+        <hr />
+        <p>
+          <strong>[F+3]</strong> is a safe, 12-frame, -3 on block,{" "}
+          <em>advancing</em> Mid, that checks crouching foes and is also the
+          foundation of Scorpions offense.
+        </p>
+        <p>
+          <strong>[F+3,2]</strong> rewards with +61 on hit and a jump cancel -
+          Scorpion's <strong>best launcher</strong> and{" "}
+          <strong>optimal combo starter</strong> damage-wise. It's final High
+          hit can be ducked under, however, making it possible for a skilled
+          opponent to counter.
+        </p>
+        <p>
+          <strong>[F+3,4]</strong> commands <strong>respect</strong> instead, by
+          ending on a -6 on block Mid, discouraging any crouching shenanigans
+          under <strong>[F+3]</strong>.
+        </p>
+        <hr />
+        <p>
+          <strong>[B+3]</strong> manifests quite uniquely. Scorpion launches his
+          Kunai <strong>very far</strong> (around default distance + 1 backdash)
+          for a slow, 21-frame, two-hit, Mid-Low. The first Mid hit is shortcut{" "}
+          <em>cancellable</em> into any special, same as <strong>[B+2]</strong>,
+          e.g. <strong>[B+3 &rarr; F+1]</strong>. The reach and 17 active frames
+          establish it as a <strong>space control</strong> move, but the -17 on
+          block demands some spacing.
+        </p>
+        <p>
+          It's a move designed to keep your opponent uncomfortable at long
+          range. Scorpion doesn't have a slide like Sub or Noob, so other
+          players rarely expect a Low from afar. Getting hit a few times,
+          conditions them to preemptively low block, or jump which can work well
+          with <strong>[B+2]</strong>, but requires a good read.
+        </p>
+        <h3 id="specials">Specials</h3>
 
         <p>
-          <strong>2</strong> is your <strong>main neutral button</strong>. It's
-          a safe, <em>disjointed</em> High, with a 10-frame start, but it's
-          central trait is it's <strong>surprising reach</strong> (about 2-3
-          steps away).
+          <strong>[B,F+1]</strong> - the signature Scorpion{" "}
+          <strong>Spear</strong> - is a projectile that stuns the opponent on
+          hit and restands them next to you.{" "}
+          <em>A second spear within the same combo drops them instead.</em>{" "}
+          Being -28 on block requires needs distance, but it being High and the
+          70-frame recovery make it{" "}
+          <strong>
+            easy to duck and slide under, jump over or teleport around
+          </strong>{" "}
+          for a free punish.
         </p>
 
         <p>
-          <strong>1</strong> is your <strong>fastest</strong> (7f start),
-          shortest, safe High, that is also <strong>+2 on block</strong>.
+          The Spear is <strong>not a zoning tool</strong>, and should not be
+          spammed or used predictably. Instead it works wonderfully as a{" "}
+          <strong>whiff-punish</strong> after a good read, or a combo extension
+          after a successful hit confirm.
         </p>
 
         <p>
-          <strong>F+3</strong> is a safe, 12f start,{" "}
-          <strong>advancing Mid</strong> - an offensive / get-up check.
+          <strong>[B,F+1 EX]</strong> hits Mid instead, surprising players that
+          like to duck under the Spear, but the meter cost often might not be
+          justified.
+        </p>
+
+        <hr />
+
+        <p>
+          <strong>[D,B+3]</strong> - the other signature move - the{" "}
+          <strong>Flame-Port</strong> - teleports Scorpion to the other side of
+          the target, hitting them with a High on arrival. It's an{" "}
+          <strong>occasional anti-zoning</strong> tool, but its 26-frame start
+          and -21 on block make it dangerous to use. Players tend to expect it
+          and punish it relentlessly.
         </p>
 
         <p>
-          <strong>B+2</strong> is a safe, fast, (9f start), <em>disjointed</em>{" "}
-          High, with a hitbox that makes it a <strong>prime anti-air</strong>{" "}
-          move. It also makes Scorpion micro-duck, being quicker and more
-          practical than <strong>F+4</strong>.
-        </p>
-
-        <p>
-          <strong>B+3</strong> an unique, <em>disjointed</em>,{" "}
-          <strong>slow and unsafe</strong> 2-hit, Mid-Low, where{" "}
-          <strong>the first hit is cancellable</strong>. It's terrible on paper,
-          but reaches very far (jump + dash), and stays active for long.
+          The enhanced <strong>[D,B+3 EX]</strong> however, is something else.
+          With its instant <strong>1-frame</strong> start, it skips the attack
+          on arrival, making it safe, opeing the door for all sorts of{" "}
+          <strong>mind games</strong>:{" "}
+          <strong>Port &rarr; Throw / D1 / Microduck &rarr; 1</strong>.
         </p>
       </section>
 
       <section>
-        <h2 id="specials">Specials to be used with restraint</h2>
-
-        <p>
-          <strong>B,F+1</strong> - the Spear - is an unsafe, 17f start,
-          full-screen, High projectile, which{" "}
-          <strong>stuns the target on hit and restands them next to you</strong>
-          .{" "}
-          <em>
-            A second spear in the same combo will knock them down instead.
-          </em>
-        </p>
-      </section>
-
-      <section>
-        <h2 id="react">Reactive play</h2>
-
-        <p>
-          Scorpion can play basic neutral, by staying at the edge of{" "}
-          <strong>2</strong> and checking foes at they come in:
-        </p>
+        <h2 id="react">Reactive play rewards patience</h2>
 
         <ul>
           <li>
@@ -116,19 +183,9 @@ export default function Page() {
 
           <li>
             <strong>2,1</strong> &rarr; they get hit &rarr; <strong>BF1</strong>{" "}
-            <GiSpearHook /> Spear &rarr; combo
+            Spear &rarr; combo
           </li>
         </ul>
-
-        <p>
-          <strong>The Spear is not a zoning tool.</strong> It controls a lot of
-          space, but can easily be ducked under, jumped over or teleported
-          around. Using it predictably will not end well. Employ it, primarily,
-          inside a combo or try to catch them mid-step. It works great when it
-          intercepts a dash, jump, or unsafe cast. You can try to provoke a
-          reaction by throwing a quick punch into empty air from afar, into a
-          spear: <strong>1 &rarr; BF1</strong>.
-        </p>
       </section>
 
       <section>
@@ -173,23 +230,6 @@ export default function Page() {
           +2 on block is not enough for a proper frame trap, yet it can spice up
           the mix if you're already close:
         </p>
-
-        <ul>
-          <li>
-            <strong>1</strong> &rarr; they keep blocking &rarr;{" "}
-            <strong>Throw</strong>
-          </li>
-
-          <li>
-            <strong>1</strong> &rarr; they tend to counter High &rarr;{" "}
-            <strong>D+1</strong>
-          </li>
-
-          <li>
-            <strong>1</strong> &rarr; they tend to counter Mid &rarr;{" "}
-            <strong>backdash &rarr; 2</strong>
-          </li>
-        </ul>
       </section>
 
       <section>
