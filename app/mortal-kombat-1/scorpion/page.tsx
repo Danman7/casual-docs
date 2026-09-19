@@ -51,7 +51,7 @@ export default function Page() {
         <h2 id="tools">Main tools</h2>
         <h3 id="normals">Normals</h3>
         <p>
-          <strong>[1]</strong> is the short and fast, 7-frame,{" "}
+          <strong>[1]</strong> is a short and fast, 7-frame,{" "}
           <strong>+2 on block</strong>, High. It's not enough for proper frame
           traps, but good for staggers and quick checks.
         </p>
@@ -60,17 +60,17 @@ export default function Page() {
           special cancel.
         </p>
         <p>
-          <strong>[1,2,2]</strong> ends in an Overhead, handling a crouching
-          defense, and baiting an up-block. The last point creates good stagger
-          opportunities: <strong>[1,2,2]</strong> once or twice, then{" "}
+          <strong>[1,2,2]</strong> ends in an Overhead, handling crouching, and
+          baiting an up-block, for some staggers: <strong>[1,2,2]</strong> once
+          or twice, then{" "}
           <strong>[1 &rarr; Throw / D1 / Backdash &rarr; 2]</strong>.
         </p>
         <hr />
         <p>
           <strong>[2]</strong> is a 10-frame, -2 on block, <em>disjointed</em>{" "}
-          High, that <strong>reaches a few steps away</strong>. That's very
-          practical for whiff-punishment and checking approaching foes, making
-          it a <strong>key neutral resource</strong>.
+          High, that <strong>reaches a few steps away</strong>. It's a{" "}
+          <strong>key neutral resource</strong> for whiff-punishment and
+          checking approaching foes.
         </p>
         <p>
           <strong>[2,1]</strong> continues into a Mid, reaching further and
@@ -80,126 +80,134 @@ export default function Page() {
         <hr />
         <p>
           <strong>[B+2]</strong>'s 9-frame start, 0 on block, and excellent
-          upwards reach, form the <strong>prime anti-air</strong> move. It can't
-          be jump cancelled on hit, but it shortcut cancels into any B,F special
-          without pressing back a second time: <strong>[B+2 &rarr; F+1]</strong>
-          . This gives it superb conversion out of a failed jump-in.
+          upwards reach, form Scorpion's <strong>prime anti-air</strong>. It
+          can't be cancelled into a jump, but can be shortcut canceled into any
+          B,F special, e.g. <strong>[B+2 &rarr; F+1]</strong>, giving combo
+          conversions out of a failed jump-in.
         </p>
-        <p>
-          <strong>[F+4]</strong> launches higher, with an actual jump cancel,
-          but is much slower, less safe, and less practical.
-        </p>
+
         <hr />
         <p>
           <strong>[F+3]</strong> is a safe, 12-frame, -3 on block,{" "}
-          <em>advancing</em> Mid, that checks crouching foes and is also the
-          foundation of Scorpions offense.
+          <em>advancing</em> Mid, that checks crouching. It's the foundation of
+          Scorpions offense.
         </p>
         <p>
           <strong>[F+3,2]</strong> rewards with +61 on hit and a jump cancel -
           Scorpion's <strong>best launcher</strong> and{" "}
-          <strong>optimal combo starter</strong> damage-wise. It's final High
-          hit can be ducked under, however, making it possible for a skilled
-          opponent to counter.
+          <strong>optimal combo starter</strong> damage-wise. Its final High hit
+          can be ducked under, making it possible for a skilled opponent to
+          counter.
         </p>
         <p>
           <strong>[F+3,4]</strong> commands <strong>respect</strong> instead, by
           ending on a -6 on block Mid, discouraging any crouching shenanigans
           under <strong>[F+3]</strong>.
         </p>
+
         <hr />
+
         <p>
-          <strong>[B+3]</strong> manifests quite uniquely. Scorpion launches his
-          Kunai <strong>very far</strong> (around default distance + 1 backdash)
-          for a slow, 21-frame, two-hit, Mid-Low. The first Mid hit is shortcut{" "}
-          <em>cancellable</em> into any special, same as <strong>[B+2]</strong>,
-          e.g. <strong>[B+3 &rarr; F+1]</strong>. The reach and 17 active frames
-          establish it as a <strong>space control</strong> move, but the -17 on
-          block demands some spacing.
+          <strong>[B+3]</strong> manifests as a unique,{" "}
+          <strong>very far reaching</strong>, 21-frame start, 17-active, -17 on
+          block, two-hit Mid-Low. The first Mid is <em>cancellable</em> into any
+          special. It's a slow and usafe <strong>space controlling</strong>{" "}
+          commitment, designed to keep your opponent uncomfortable at distance,
+          if you get a good read.
         </p>
-        <p>
-          It's a move designed to keep your opponent uncomfortable at long
-          range. Scorpion doesn't have a slide like Sub or Noob, so other
-          players rarely expect a Low from afar. Getting hit a few times,
-          conditions them to preemptively low block, or jump which can work well
-          with <strong>[B+2]</strong>, but requires a good read.
-        </p>
+
         <h3 id="specials">Specials</h3>
 
         <p>
-          <strong>[B,F+1]</strong> - the signature Scorpion{" "}
-          <strong>Spear</strong> - is a projectile that stuns the opponent on
-          hit and restands them next to you.{" "}
-          <em>A second spear within the same combo drops them instead.</em>{" "}
-          Being -28 on block requires needs distance, but it being High and the
-          70-frame recovery make it{" "}
-          <strong>
-            easy to duck and slide under, jump over or teleport around
-          </strong>{" "}
-          for a free punish.
+          <strong>[B,F+1]</strong> - the signature <strong>Spear</strong> - is a
+          High, full-screen projectile that stuns on hit and restands the target
+          next to you.{" "}
+          <em>A second spear within the same combo drops them instead.</em> It
+          controls a lot of space, but is <strong>not a zoning tool</strong>, as
+          it has a 70-frame recovery, is -28 on block, and can easily be ducked
+          under, or jumped over.
         </p>
 
         <p>
-          The Spear is <strong>not a zoning tool</strong>, and should not be
-          spammed or used predictably. Instead it works wonderfully as a{" "}
-          <strong>whiff-punish</strong> after a good read, or a combo extension
-          after a successful hit confirm.
-        </p>
-
-        <p>
-          <strong>[B,F+1 EX]</strong> hits Mid instead, surprising players that
-          like to duck under the Spear, but the meter cost often might not be
-          justified.
+          If used with restraint however, it serves as a strong{" "}
+          <strong>whiff-punish</strong> after a good read, or a{" "}
+          <strong>combo extension</strong> after a successful hit-confirm.
         </p>
 
         <hr />
 
         <p>
-          <strong>[D,B+3]</strong> - the other signature move - the{" "}
-          <strong>Flame-Port</strong> - teleports Scorpion to the other side of
-          the target, hitting them with a High on arrival. It's an{" "}
-          <strong>occasional anti-zoning</strong> tool, but its 26-frame start
-          and -21 on block make it dangerous to use. Players tend to expect it
-          and punish it relentlessly.
+          <strong>[D,B+3]</strong> - <strong>Flame-Port</strong> or simply{" "}
+          <strong>Port</strong> - teleports Scorpion to the other side of the
+          target, throwing a High punch on arrival, that cannot be chained. With
+          26 frames to start and -21 on block it's a rather dangerous
+          anti-zoning instrument.
         </p>
 
         <p>
-          The enhanced <strong>[D,B+3 EX]</strong> however, is something else.
-          With its instant <strong>1-frame</strong> start, it skips the attack
-          on arrival, making it safe, opeing the door for all sorts of{" "}
+          <strong>[D,B+3 EX]</strong> on the other hand has an instant{" "}
+          <strong>1-frame</strong> start, and skips the attack on arrival. That
+          makes it safe, opeing the door for all sorts of{" "}
           <strong>mind games</strong>:{" "}
           <strong>Port &rarr; Throw / D1 / Microduck &rarr; 1</strong>.
+        </p>
+
+        <hr />
+
+        <p>
+          <strong>[B,F+2]</strong> - <strong>Blazing Charge</strong> or simply{" "}
+          <strong>Charge</strong> - makes Scorpion dash forward, switching sides
+          on hit, damaging the target. It's a very quick Mid with a 13-frame
+          start, and only 4 active frames, but unsafe at -21 on block.
+        </p>
+
+        <p>
+          <strong>[B,F+2 EX]</strong> is much the same move, except it has{" "}
+          <strong>armor</strong>, making it Scorpion's main{" "}
+          <strong>armored reversal</strong>.
         </p>
       </section>
 
       <section>
         <h2 id="react">Reactive play rewards patience</h2>
 
+        <p>
+          <strong>Don't glue yourself to your opponent.</strong> Scorpion can
+          lean on his safe, disjointed normals with good reach, and play a
+          disciplined neutral from a few steps away. In the beginning, let them
+          approach first. Keep the routine simple:
+        </p>
+
         <ul>
           <li>
-            <strong>2,1</strong> &rarr; they block &rarr; you block, duck, or
-            disengage
+            <strong>[2,1]</strong> &rarr; they <em>block</em> &rarr; you block,
+            duck, or disengage
           </li>
 
           <li>
-            <strong>2,1</strong> &rarr; they get hit &rarr; <strong>BF1</strong>{" "}
-            Spear &rarr; combo
+            <strong>[2,1]</strong> &rarr; they <em>get hit</em> &rarr; Spear
+            &rarr; combo
           </li>
         </ul>
+
+        <p>
+          Switch <strong>[2,1]</strong> with <strong>[1,2]</strong> if they are
+          on top of you, <strong>[B+2]</strong> if they jump-in, or{" "}
+          <strong>[F+3]</strong> if they tend to duck a lot. Occasionally, throw
+          a <strong>[B+3]</strong> at some distance to challenge a dash or far
+          jump. Scorpion can{" "}
+          <strong>convert out of almost any whiff at any range</strong>.
+        </p>
       </section>
 
       <section>
         <h2 id="offense">A staggered offense</h2>
 
         <p>
-          Successful aggression is about keeping the other player guessing.
           Without a standing Overhead or Low cancel on his own, Scorpion's
-          offense is a bit narrow.
-        </p>
-
-        <p>
-          <em>Hit or throw</em> is the basic mix-up. Mids are the safest hits.
-          Hence, <strong>F+3</strong> is the natural basis.
+          offense is a bit narrow. <em>Hit or throw</em> is the basic mix-up.
+          Mids are the safest hits. Hence, <strong>F+3</strong> is the natural
+          basis.
         </p>
 
         <p>
