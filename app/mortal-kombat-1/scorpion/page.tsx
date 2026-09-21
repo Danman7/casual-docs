@@ -22,7 +22,7 @@ export default function Page() {
         />
         <p>
           MK1's Scorpion <strong>lacks complex mechanics</strong>, encourages a{" "}
-          <strong>simple game plan</strong> and{" "}
+          <strong>simple game plan</strong>, and{" "}
           <strong>teaches fundamentals</strong>:
         </p>
 
@@ -49,21 +49,27 @@ export default function Page() {
 
       <section>
         <h2 id="tools">Main tools</h2>
+
         <h3 id="normals">Normals</h3>
+
         <p>
-          <strong>[1]</strong> is a short and fast, 7-frame,{" "}
+          <strong>[1]</strong> is a <strong>short and fast</strong>, 7-frame,{" "}
           <strong>+2 on block</strong>, High. It's not enough for proper frame
-          traps, but good for staggers and quick checks.
+          traps, but adds <strong>useful pressure and breathing space</strong>{" "}
+          for when they are on top of you. It also works surprisingly well as a{" "}
+          <strong>secondary anti-air</strong> in certain scenarios.
         </p>
+
         <p>
-          <strong>[1,2]</strong> safely hit-confirms <strong>[1]</strong> into a
-          special cancel.
+          <strong>[1,2]</strong> trades the plus-frames for{" "}
+          <strong>a more practical hit-confirm</strong> out of{" "}
+          <strong>[1]</strong> for a combo.
         </p>
+
         <p>
-          <strong>[1,2,2]</strong> ends in an Overhead, handling crouching, and
-          baiting an up-block, for some staggers: <strong>[1,2,2]</strong> once
-          or twice, then{" "}
-          <strong>[1 &rarr; Throw / D1 / Backdash &rarr; 2]</strong>.
+          <strong>[1,2,2]</strong> is handy for <strong>staggers</strong>. It{" "}
+          <strong>ends with an Overhead</strong>, eliminating a crouching
+          defense, baiting an up-block.
         </p>
         <hr />
         <p>
@@ -72,32 +78,35 @@ export default function Page() {
           <strong>key neutral resource</strong> for whiff-punishment and
           checking approaching foes.
         </p>
+
         <p>
-          <strong>[2,1]</strong> continues into a Mid, reaching further and
-          dealing more damage than <strong>[1,2]</strong>, for a{" "}
-          <strong>principal hit-confirm</strong> into a Spear.
+          <strong>[2,1]</strong> continues into a -6 on block Mid. This is the{" "}
+          <strong>principal hit-confirm</strong> as it reaches further and deals
+          more damage than <strong>[1,2]</strong>.
         </p>
         <hr />
         <p>
-          <strong>[B+2]</strong>'s 9-frame start, 0 on block, and excellent
-          upwards reach, form Scorpion's <strong>prime anti-air</strong>. It
-          can't be cancelled into a jump, but can be shortcut canceled into any
-          B,F special, e.g. <strong>[B+2 &rarr; F+1]</strong>, giving combo
+          <strong>[B+2]</strong> is a 9-frame, 0 on block High with excellent
+          upwards reach - Scorpion's <strong>prime anti-air</strong>. It can't
+          be cancelled into a jump, but can be shortcut canceled into any B,F
+          special, e.g. <strong>[B+2 &rarr; F+1]</strong>, giving combo
           conversions out of a failed jump-in.
         </p>
 
         <hr />
+
         <p>
-          <strong>[F+3]</strong> is a safe, 12-frame, -3 on block,{" "}
-          <em>advancing</em> Mid, that checks crouching. It's the foundation of
-          Scorpions offense.
+          <strong>[F+3]</strong> is a 12-frame, -3 on block, <em>advancing</em>{" "}
+          Mid, that forms the safest foundation of Scorpions offense.
         </p>
+
         <p>
-          <strong>[F+3,2]</strong> rewards with +61 on hit and a jump cancel -
-          Scorpion's <strong>best launcher</strong> and{" "}
-          <strong>optimal combo starter</strong> damage-wise. Its final High hit
-          can be ducked under, making it possible for a skilled opponent to
-          counter.
+          <strong>[F+3,2]</strong> rewards with a +61 on hit jump cancel, for
+          the <strong>best launcher</strong> and{" "}
+          <strong>optimal combo starter</strong> damage-wise. It{" "}
+          <strong>can be repeated up to 3 times</strong> for a juggle, depending
+          on what preceded it. Its final High hit can be ducked under, making it
+          possible for a skilled opponent to counter.
         </p>
         <p>
           <strong>[F+3,4]</strong> commands <strong>respect</strong> instead, by
@@ -111,9 +120,9 @@ export default function Page() {
           <strong>[B+3]</strong> manifests as a unique,{" "}
           <strong>very far reaching</strong>, 21-frame start, 17-active, -17 on
           block, two-hit Mid-Low. The first Mid is <em>cancellable</em> into any
-          special. It's a slow and usafe <strong>space controlling</strong>{" "}
-          commitment, designed to keep your opponent uncomfortable at distance,
-          if you get a good read.
+          special. It's a{" "}
+          <strong>slow and usafe space controlling commitment</strong>, that
+          tends to surprise unprepared foes, but requires a good read.
         </p>
 
         <h3 id="specials">Specials</h3>
@@ -130,8 +139,9 @@ export default function Page() {
 
         <p>
           If used with restraint however, it serves as a strong{" "}
-          <strong>whiff-punish</strong> after a good read, or a{" "}
-          <strong>combo extension</strong> after a successful hit-confirm.
+          <strong>whiff-punish</strong> after a good read, or the{" "}
+          <strong>foremost combo extension</strong> after a successful
+          hit-confirm.
         </p>
 
         <hr />
@@ -139,17 +149,16 @@ export default function Page() {
         <p>
           <strong>[D,B+3]</strong> - <strong>Flame-Port</strong> or simply{" "}
           <strong>Port</strong> - teleports Scorpion to the other side of the
-          target, throwing a High punch on arrival, that cannot be chained. With
-          26 frames to start and -21 on block it's a rather dangerous
-          anti-zoning instrument.
+          target, throwing a High punch on arrival, that{" "}
+          <strong>cannot be chained</strong>. With 26 frames to start and -21 on
+          block it's a rather <strong>dangerous</strong> anti-zoning instrument.
         </p>
 
         <p>
           <strong>[D,B+3 EX]</strong> on the other hand has an instant{" "}
-          <strong>1-frame</strong> start, and skips the attack on arrival. That
-          makes it safe, opeing the door for all sorts of{" "}
-          <strong>mind games</strong>:{" "}
-          <strong>Port &rarr; Throw / D1 / Microduck &rarr; 1</strong>.
+          <strong>1-frame</strong> start, and{" "}
+          <strong>skips the attack on arrival</strong>. That makes it safe,
+          opeing the door for a multitude of <strong>mind games</strong>.
         </p>
 
         <hr />
@@ -157,8 +166,9 @@ export default function Page() {
         <p>
           <strong>[B,F+2]</strong> - <strong>Blazing Charge</strong> or simply{" "}
           <strong>Charge</strong> - makes Scorpion dash forward, switching sides
-          on hit, damaging the target. It's a very quick Mid with a 13-frame
-          start, and only 4 active frames, but unsafe at -21 on block.
+          on hit, damaging the target. It's a quick Mid with a 13-frame start,
+          and only 4 active frames, but <strong>very unsafe</strong> at -21 on
+          block.
         </p>
 
         <p>
@@ -173,9 +183,9 @@ export default function Page() {
 
         <p>
           <strong>Don't glue yourself to your opponent.</strong> Scorpion can
-          lean on his safe, disjointed normals with good reach, and play a
-          disciplined neutral from a few steps away. In the beginning, let them
-          approach first. Keep the routine simple:
+          lean on his safe, disjointed normals with good reach, and play a{" "}
+          <strong>disciplined neutral from a few steps away</strong>. In the
+          beginning, let them approach first. Keep the routine simple:
         </p>
 
         <ul>
@@ -192,11 +202,22 @@ export default function Page() {
 
         <p>
           Switch <strong>[2,1]</strong> with <strong>[1,2]</strong> if they are
-          on top of you, <strong>[B+2]</strong> if they jump-in, or{" "}
-          <strong>[F+3]</strong> if they tend to duck a lot. Occasionally, throw
-          a <strong>[B+3]</strong> at some distance to challenge a dash or far
-          jump. Scorpion can{" "}
-          <strong>convert out of almost any whiff at any range</strong>.
+          on top of you, or <strong>[F+3]</strong> if they tend to duck a lot.
+        </p>
+
+        <p>
+          You can meet jump-ins with <strong>[B+2]</strong>. Just keep in mind
+          it <strong>counts as a juggle</strong> so you won't be able to do 3{" "}
+          <strong>[F+3,2]</strong>s later. You can mix that up with a proactive
+          jump of your own into <strong>[air 1,3]</strong> which is cancellable
+          into a grounded Spear if it hits.
+        </p>
+
+        <p>
+          If they are apt to stay grounded at about jump distance and don't
+          throw too many projectiles, challenge them with the occasional{" "}
+          <strong>[B+3]</strong>. Let it finish. Only go for a Mid-cancel into a
+          Spear if you spot them getting consistently hit.
         </p>
       </section>
 
@@ -204,78 +225,35 @@ export default function Page() {
         <h2 id="offense">A staggered offense</h2>
 
         <p>
-          Without a standing Overhead or Low cancel on his own, Scorpion's
-          offense is a bit narrow. <em>Hit or throw</em> is the basic mix-up.
-          Mids are the safest hits. Hence, <strong>F+3</strong> is the natural
-          basis.
+          As Scorpion you have <strong>no standing Overhead or Low</strong>{" "}
+          which can be cancelled. Therefore, if you wish to be the one attacking{" "}
+          <strong>
+            on your own, your mix is <em>hit or throw</em>
+          </strong>
+          .
         </p>
 
         <p>
-          <strong>F+3,2</strong> is your <strong>best launcher</strong> and{" "}
-          <strong>optimal combo starter</strong> damage-wise. It starts faster
-          and provides better advantage on hit than <strong>F+4</strong>. It
-          also can be <strong>repeated up to 3 times</strong> for a juggle. An
-          issue is the second hit, which is a High, and can be countered from a
-          crouch.
+          As a Mid,<strong>[F+3]</strong> plays a critical role. Establish
+          respect with <strong>[F+3,4]</strong> then stagger:{" "}
+          <strong>[F+3 &rarr; Throw / D+1 / backdash]</strong>. If they get hit
+          a lot, immediately switch to <strong>[F+3,2]</strong> for the real
+          damage. Or go for it immediately if you feel it will pay off.
         </p>
 
         <p>
-          <strong>F+3,4</strong> ends with a knockback Mid instead. It can't be
-          cancelled, but <strong>establishes respect</strong>, discouraging
-          crouching counters.
-        </p>
-
-        <p>
-          Respect for <strong>F+3,2</strong> and <strong>F+3,4</strong> opens
-          the door for <strong>F+3</strong> staggers:{" "}
-          <strong>F+3 &rarr; Throw / D+1 / backdash</strong>.
-        </p>
-
-        <p>
-          Of course, only probing with <strong>F+3</strong> is limited.{" "}
-          <strong>1,2,2</strong> ends with an Overhead, bating an up block. It
-          also starts faster and adds additional staggers. <strong>1</strong>'s
-          +2 on block is not enough for a proper frame trap, yet it can spice up
-          the mix if you're already close:
+          Still, the above will become limited after a while, so include{" "}
+          <strong>[1]</strong> plus-frame pressure, if they keep touching
+          you.You don't need to go for the full <strong>[1,2,2]</strong> into
+          stagger. Practice hitting the 2-frame <strong>[1 &rarr; 1]</strong>{" "}
+          window if they like to counter after your hits. Try{" "}
+          <strong>[1 &rarr; D1 / backdash &rarr; 2]</strong> if you can't hit
+          it. Or, <strong>[1 &rarr; throw]</strong> if they keep blocking.
         </p>
       </section>
 
       <section>
-        <h2 id="combos">Convert almost any whiff</h2>
-
-        <p>Scorpion can always combo out of the following:</p>
-
-        <ul>
-          <li>
-            <strong>1,2</strong> is fast and short;
-          </li>
-
-          <li>
-            <strong>2,1</strong> is optimal from 2-3 steps away;
-          </li>
-
-          <li>
-            <strong>F+3</strong> is just a bit slower and shorter, but hits Mid
-            and can launch with <strong>F+3,2</strong>;
-          </li>
-
-          <li>
-            <strong>B+3</strong> can surprise from far away, but's it's slow and
-            unsafe;
-          </li>
-
-          <li>
-            <strong>B+2</strong> can interupt jump-ins, but{" "}
-            <strong>it counts as a juggle</strong>, thus 3x{" "}
-            <strong>F+3,2</strong> will not work.
-          </li>
-        </ul>
-
-        <p>
-          <strong>2,1</strong> has the balance between reach, speed and damage.
-          From there you only really need 3-4 routes.{" "}
-          <strong>Go for consisteny, not max damage.</strong>
-        </p>
+        <h2 id="combos">Combos feel natural</h2>
 
         <p>
           <strong>Starter &rarr; B,F+1 &rarr; 3,3,3 &rarr; B,F+2</strong>
