@@ -1,8 +1,11 @@
 import { getPage } from "@/app/siteMap";
+import Link from "next/link";
 
 const profileArchetypesPage = getPage("/warhammer-40k/profile-archetypes");
 
 export const metadata = profileArchetypesPage.metadata;
+
+const attackSequencePage = getPage("/warhammer-40k/attack-sequence");
 
 export default async function Page() {
   return (
@@ -10,6 +13,14 @@ export default async function Page() {
       <h1>{profileArchetypesPage.title}</h1>
 
       <section>
+        <p>
+          <Link href={`${attackSequencePage.href}`}>Attacks</Link> in WH40k are
+          executed by{" "}
+          <strong>comparing a weapon's profile with a target's profie</strong>.
+          With hundreds of datasheets, each having multiple loadouts, it quickly
+          becomes impractical to put each one side by side.
+        </p>
+
         <p>
           WH40k has hundreds of datasheets, all of which may take several
           loadouts. It would be difficult to compare any weapon against every
