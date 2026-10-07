@@ -93,10 +93,10 @@ export const siteMap = {
           },
         },
         {
-          href: "/warhammer-40k/profile-archetypes",
-          title: "Profile Archetypes",
+          href: "/warhammer-40k/archetypes",
+          title: "Archetypes",
           metadata: {
-            title: "Profile Archetypes",
+            title: "Archetypes",
             description:
               "Learn the common Warhammer 40,000 unit profile archetypes and what their characteristics mean.",
           },

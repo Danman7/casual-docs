@@ -2,7 +2,6 @@ import { getPage } from "@/app/siteMap";
 import Image from "next/image";
 import Scorpion from "../../../public/mk1/scorpion.webp";
 import Scorpion_2 from "../../../public/mk1/scorpion_2.webp";
-import { Divider } from "@/app/ui/Divider";
 
 const scorpionPage = getPage("/mortal-kombat-1/scorpion");
 
@@ -110,10 +109,9 @@ export default function Page() {
         <h2 id="react">A superb reactive neutral</h2>
 
         <Image
-          loading="eager"
           src={Scorpion_2}
           alt="Scorpion performing standing 2 in Mortal Kombat 1"
-          className="sm:float-right sm:ml-4 sm:max-w-1/2"
+          className="side-img"
         />
 
         <p>
@@ -333,18 +331,40 @@ export default function Page() {
         </p>
 
         <p>
-          <strong>Mavado</strong> is the safe, all-around buff. [Throw], [EX
-          B,F+2], [2,1,4] and [F+3,4] become combo starters, providing Throw and
-          Armor routes. Air extension can use Kameo instead of meter, for just a
-          bit less damage.
+          <strong>Mavado</strong> is the safe, easy all-around buff. [Throw],
+          [EX B,F+2], [2,1,4] and [F+3,4] become combo starters, providing Throw
+          and Armor routes. Air extension can use Kameo instead of meter, for
+          just a bit less damage. You can break armor with the slide if timed
+          right.
         </p>
 
         <p>
-          <strong>Ferra</strong> provides an actual chainable Overhead/Low mix,
+          <strong>Ferra</strong> supplies an actual chainable Overhead/Low mix,
           which combines especially well with [B+3]. If you call her to
           Scorpion's back, but micro-step forward instead of immediately
-          hitting, it can reset the combo for a vortex-y offense. Like Mavado,
-          she also adds Throw routes, but not Armored routes.
+          hitting, it can reset a combo. Like Mavado, she also adds Throw
+          routes, but not Armored routes.
+        </p>
+
+        <p>
+          <strong>Motaro</strong> is a reset/safety Kameo. No throw or armor
+          conversions, but Scorpion gets his MK11 style Port, where he can keep
+          his distance if he doesn't hit-confirm. There are some reset available
+          with the tail projectile as well.
+        </p>
+
+        <p>
+          If you have the skill <strong>Janet</strong> comes close to a more
+          resource efficient Mavado. She enables throw and armor combos, as well
+          as meterless air extensions, while recharging quickly.
+        </p>
+
+        <p>
+          <strong>Khameleon</strong> is a very flexible option, again provided
+          you have the skill. Kitana does resets, Mileena adds an Overhead and
+          easy extensions, and Jade adds a Mid extender plus projectile
+          protection. As with any main howerver, having the right tool at a time
+          is inconsistent.
         </p>
       </section>
     </>

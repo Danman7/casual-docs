@@ -43,6 +43,14 @@
   @apply font-semibold text-lg;
 }
 
+@utility cut-img {
+  @apply max-h-56 object-cover rounded border border-foreground/20 shadow;
+}
+
+@utility side-img {
+  @apply sm:float-right sm:pl-4 sm:max-w-1/2;
+}
+
 @layer base {
   body {
     background: var(--background);
