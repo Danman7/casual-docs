@@ -87,8 +87,8 @@ export default async function Page() {
           <strong>
             individually fragile, but usually fielded in large numbers
           </strong>
-          . This roughtly covers 20% of infantry across all factions with
-          variations to squad sizes, Toughness and Save.
+          . This roughly covers 20% of infantry across all factions with
+          variations in squad sizes, Toughness and Save.
         </p>
 
         <p>
@@ -148,7 +148,7 @@ export default async function Page() {
           weapons with very good Strength, but the{" "}
           <strong>invulnerable save</strong> puts a limit on how effective AP
           can be. Anything above AP-2 normally has no further benefit before
-          modifiers. Thus, the presence of TEQ on the field, requires proper
+          modifiers. Thus, the presence of TEQ on the field requires proper
           gear like a supercharged Heavy Plasma Cannon, Reaper launcher, or Rail
           Rifle.
         </p>
@@ -216,7 +216,7 @@ export default async function Page() {
         <h3 id="super-heavy">Super-heavy Armor [T13+]</h3>
 
         <p>
-          The Lasscannon wounds on a 5+. These are the toughest centrepieces and
+          The Lascannon wounds on a 5+. These are the toughest centrepieces and
           need time and concentrated firepower to remove.
         </p>
       </section>

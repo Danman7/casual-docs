@@ -26,7 +26,7 @@ export default function Page() {
         </p>
 
         <p>
-          He is neither a zoner, nor a rushdown characer, but rather{" "}
+          He is neither a zoner nor a rushdown character, but rather{" "}
           <strong>feels most comfortable at mid-range</strong>. His offense is
           honest, missing a true mix-up, relying on strike/throw stagger.
         </p>
@@ -65,7 +65,7 @@ export default function Page() {
         </p>
 
         <p>
-          <strong>[F+3,2]</strong> -6, Mid-High launcher, that can be{" "}
+          <strong>[F+3,2]</strong> -6, Mid-High launcher that can be{" "}
           <strong>repeated up to 3 times</strong> for an{" "}
           <strong>optimal combo starter and extension</strong>. Second hit can
           be ducked under for a counter.
@@ -82,14 +82,14 @@ export default function Page() {
         </p>
 
         <p>
-          <strong>[B+3]</strong> A unique, <strong>very far reaching</strong>,
+          <strong>[B+3]</strong> A unique, <strong>very far-reaching</strong>,
           disjointed, 21f, -19, but 17 active frames, two hit Mid-Low. Only the
           first hit can be cancelled. A long-range space-control commitment.
         </p>
 
         <p>
           <strong>[B,F+1] Spear</strong> - Full-screen, 17f, -28, High
-          projectile, that stuns on hit and restands the target next to you.{" "}
+          projectile that stuns on hit and restands the target next to you.{" "}
           <em>A second Spear within the same combo drops them.</em> A lot of
           space-control with 131 active frames, but unsafe and predictable.
         </p>
@@ -115,7 +115,7 @@ export default function Page() {
         />
 
         <p>
-          Scorpion <strong>covers good space, rather than overwhelm</strong> the
+          Scorpion <strong>covers good space, rather than overwhelms</strong> the
           opponent. There is a button that makes movement risky for every
           distance.
         </p>
@@ -133,7 +133,7 @@ export default function Page() {
           </li>
 
           <li>
-            Spear catches dashes, whiffs, and sometimes jimp-ins full-screen.
+            Spear catches dashes, whiffs, and sometimes jump-ins full-screen.
           </li>
         </ul>
 
@@ -174,7 +174,7 @@ export default function Page() {
 
         <p>
           Without a standing, cancellable Overhead or Low, Scorpion opens
-          players up trough making them respect continuations, then stopping
+          players up through making them respect continuations, then stopping
           early, using throws, delayed buttons, and situational challenges.{" "}
           [F+3] is a natural anchor.
         </p>
@@ -187,13 +187,13 @@ export default function Page() {
 
         <p>
           You can risk getting closer and add [1] staggers. The full [1,2,2]
-          string ends in an Overhead, bating an up-block. You can condition,
+          string ends in an Overhead, baiting an up-block. You can condition,
           then follow up with:
         </p>
 
         <ul>
           <li>
-            [1 &rarr; 1] if they tend to counter afte blocking and you can hit
+            [1 &rarr; 1] if they tend to counter after blocking and you can hit
             the 2 frame window.
           </li>
 
@@ -215,8 +215,8 @@ export default function Page() {
 
         <p>
           Going on the offense with Scorpion is not impractical. Rather more
-          limited than reacting to the opponent. You have to make them guess are
-          you is going to continue, throw, or disengage.
+          limited than reacting to the opponent. You have to make them guess
+          whether you are going to continue, throw, or disengage.
         </p>
       </section>
 
@@ -229,7 +229,7 @@ export default function Page() {
           buttons and timings. At first you only need to remember that:
         </p>
         <ul>
-          <li>Optimal routes go trough a [F+3,2] juggle.</li>
+          <li>Optimal routes go through a [F+3,2] juggle.</li>
           <li>A second Spear in a combo drops the opponent.</li>
         </ul>
         <p>
@@ -349,13 +349,13 @@ export default function Page() {
         <p>
           <strong>Motaro</strong> is a reset/safety Kameo. No throw or armor
           conversions, but Scorpion gets his MK11 style Port, where he can keep
-          his distance if he doesn't hit-confirm. There are some reset available
+          his distance if he doesn't hit-confirm. There are some resets available
           with the tail projectile as well.
         </p>
 
         <p>
           If you have the skill <strong>Janet</strong> comes close to a more
-          resource efficient Mavado. She enables throw and armor combos, as well
+          resource-efficient Mavado. She enables throw and armor combos, as well
           as meterless air extensions, while recharging quickly.
         </p>
 
@@ -363,7 +363,7 @@ export default function Page() {
           <strong>Khameleon</strong> is a very flexible option, again provided
           you have the skill. Kitana does resets, Mileena adds an Overhead and
           easy extensions, and Jade adds a Mid extender plus projectile
-          protection. As with any main howerver, having the right tool at a time
+          protection. As with any main, however, having the right tool at a time
           is inconsistent.
         </p>
       </section>
