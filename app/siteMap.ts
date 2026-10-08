@@ -80,7 +80,7 @@ export const siteMap = {
           metadata: {
             title: "Battle Round",
             description:
-              "Learn the five phases and core flow of a Warhammer 40,000 battle round.",
+              "Learn the battle-round structure, turn steps, and five phases of Warhammer 40,000.",
           },
         },
         {
