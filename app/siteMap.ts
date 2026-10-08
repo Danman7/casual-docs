@@ -16,6 +16,13 @@ export type NavigationPage = Pick<SitePage, "href" | "title"> & {
   readonly children?: readonly NavigationPage[];
 };
 
+export type PageNavigation = {
+  readonly previous?: Pick<SitePage, "href" | "title">;
+  readonly next?: Pick<SitePage, "href" | "title">;
+};
+
+export type BreadcrumbPage = Pick<SitePage, "href" | "title">;
+
 export const siteMap = {
   href: "/",
   title: "Casual Docs",
@@ -131,6 +138,43 @@ function findPage(page: SitePage, href: string): SitePage | undefined {
   }
 }
 
+function findParentPage(
+  page: SitePage,
+  href: string,
+): SitePage | undefined {
+  if (page.children?.some((child) => child.href === href)) {
+    return page;
+  }
+
+  for (const child of page.children ?? []) {
+    const parent = findParentPage(child, href);
+
+    if (parent) {
+      return parent;
+    }
+  }
+}
+
+function findPageTrail(
+  page: SitePage,
+  href: string,
+  trail: readonly SitePage[] = [],
+): readonly SitePage[] | undefined {
+  const nextTrail = [...trail, page];
+
+  if (page.href === href) {
+    return nextTrail;
+  }
+
+  for (const child of page.children ?? []) {
+    const match = findPageTrail(child, href, nextTrail);
+
+    if (match) {
+      return match;
+    }
+  }
+}
+
 export function getPage(href: SiteRoute): SitePage {
   const page = findPage(siteMap, href);
 
@@ -143,6 +187,35 @@ export function getPage(href: SiteRoute): SitePage {
 
 export function getTopLevelPages(): readonly SitePage[] {
   return siteMap.children;
+}
+
+export function getBreadcrumbs(href: string): readonly BreadcrumbPage[] {
+  const trail = findPageTrail(siteMap, href);
+
+  return trail?.slice(1) ?? [];
+}
+
+export function getPageNavigation(href: string): PageNavigation {
+  const parent = findParentPage(siteMap, href);
+
+  if (
+    !parent ||
+    !siteMap.children.some((page) => page.href === parent.href)
+  ) {
+    return {};
+  }
+
+  const siblings = parent.children ?? [];
+  const currentPageIndex = siblings.findIndex((page) => page.href === href);
+
+  return {
+    ...(currentPageIndex > 0
+      ? { previous: siblings[currentPageIndex - 1] }
+      : {}),
+    ...(currentPageIndex < siblings.length - 1
+      ? { next: siblings[currentPageIndex + 1] }
+      : {}),
+  };
 }
 
 function toNavigationPage(

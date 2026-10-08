@@ -16,7 +16,7 @@ export default function Home() {
       </p>
 
       <nav aria-labelledby="game-pages-heading">
-        <ul className="list justify-center list-none p-0 lead text-xl">
+        <ul className="list justify-center list-none p-0 text-xl">
           {pages.map((page) => (
             <li key={page.href}>
               <Link href={page.href}>{page.title}</Link>

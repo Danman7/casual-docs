@@ -34,29 +34,6 @@ export default async function Page() {
           Pain, Invulnerable Saves, or other modifiers.
         </p>
 
-        <div className="flex justify-between">
-          <div>
-            <div className="font-bold">Weapon</div>
-            <div>Strength</div>
-            <div>Armor Penetration</div>
-            <div>Damage</div>
-          </div>
-
-          <div>
-            <div>&nbsp;</div>
-            <div>&harr;</div>
-            <div>&harr;</div>
-            <div>&harr;</div>
-          </div>
-
-          <div>
-            <div className="font-bold">Target</div>
-            <div>Toughness</div>
-            <div>Saves</div>
-            <div>Wounds</div>
-          </div>
-        </div>
-
         <p>
           <strong>Wound breakpoints matter.</strong> Toughness is most important
           when it changes the wound roll: S5 wounds T4 on a 3+, but T6 on a 5+.
@@ -148,8 +125,8 @@ export default async function Page() {
           weapons with very good Strength, but the{" "}
           <strong>invulnerable save</strong> puts a limit on how effective AP
           can be. Anything above AP-2 normally has no further benefit before
-          modifiers. Thus, the presence of TEQ on the field requires proper
-          gear like a supercharged Heavy Plasma Cannon, Reaper launcher, or Rail
+          modifiers. Thus, the presence of TEQ on the field requires proper gear
+          like a supercharged Heavy Plasma Cannon, Reaper launcher, or Rail
           Rifle.
         </p>
       </section>

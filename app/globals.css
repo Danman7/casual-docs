@@ -39,10 +39,6 @@
   @apply flex gap-2 items-center;
 }
 
-@utility lead {
-  @apply font-semibold text-lg;
-}
-
 @utility cut-img {
   @apply max-h-56 object-cover rounded border border-foreground/20 shadow;
 }
@@ -72,7 +68,7 @@
     }
 
     blockquote {
-      @apply border-l-4 pl-4 border-foreground;
+      @apply border-l-4 pl-4 border-foreground/50;
     }
 
     a {

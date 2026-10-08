@@ -34,7 +34,7 @@ export const Table = <T,>({
             return (
               <th
                 key={column.id}
-                className={`p-2 lead border-b border-light wrap-break-word ${alignmentClassName[align]}`}
+                className={`py-2 border-b border-light wrap-break-word ${alignmentClassName[align]}`}
               >
                 {column.header}
               </th>
@@ -47,7 +47,7 @@ export const Table = <T,>({
         {data.length === 0 ? (
           <tr className="border-b border-light">
             <td
-              className="p-2 whitespace-normal wrap-break-word"
+              className="py-2 whitespace-normal wrap-break-word"
               colSpan={columns.length}
             >
               {emptyMessage}
@@ -62,7 +62,7 @@ export const Table = <T,>({
                 return (
                   <td
                     key={column.id}
-                    className={`p-2 whitespace-normal wrap-break-word ${alignmentClassName[align]}`}
+                    className={`py-2 whitespace-normal wrap-break-word ${alignmentClassName[align]}`}
                   >
                     {column.accessor(row)}
                   </td>

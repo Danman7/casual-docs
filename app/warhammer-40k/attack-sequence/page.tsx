@@ -1,10 +1,9 @@
 import { getPage } from "@/app/siteMap";
-import { woundRollColumns, woundRollRows } from "@/app/warhammer-40k/constants";
-import { Divider } from "@/app/ui/Divider";
 import { Table } from "@/app/ui/Table";
+import { woundRollColumns, woundRollRows } from "@/app/warhammer-40k/constants";
 
 import { BsFillDice6Fill } from "react-icons/bs";
-import { GiBolterGun, GiHumanTarget, GiRollingDices } from "react-icons/gi";
+import { GiBolterGun, GiHumanTarget } from "react-icons/gi";
 
 const attackSequencePage = getPage("/warhammer-40k/attack-sequence");
 
@@ -16,21 +15,29 @@ export default async function Page() {
       <h1>{attackSequencePage.title}</h1>
 
       <section>
-        <h2 id="compare">Attacks compare the weapon to the target</h2>
+        <p>
+          After you select weapons and targets, resolve each attack to find out
+          whether it damages the target. The same sequence works for shooting
+          and melee.
+        </p>
+      </section>
+
+      <section>
+        <h2 id="compare">Weapons test different parts of a target</h2>
 
         <p>
-          Attacks are declared by units, but executed by weapons. Once your unit
-          has an eligible targed, you match their weapons' attributes with those
-          of the target.
+          A weapon must first hit, then wound, then beat the target&apos;s save.
+          Its <strong>Strength, Armour Penetration and Damage</strong> matter at
+          different points in that process.
         </p>
 
-        <div className="list justify-between">
+        <div className="flex justify-between">
           <div>
-            <div className="lead">
+            <div className="font-bold">
               Weapon <GiBolterGun />
             </div>
             <div>Strength (S)</div>
-            <div>Armor Penetration (AP)</div>
+            <div>Armour Penetration (AP)</div>
             <div>Damage (D)</div>
           </div>
 
@@ -42,23 +49,18 @@ export default async function Page() {
           </div>
 
           <div>
-            <div className="lead">
+            <div className="font-bold">
               Target <GiHumanTarget />
             </div>
             <div>Toughness (T)</div>
-            <div>Saves (Sv)</div>
+            <div>Saves (Sv and InSv)</div>
             <div>Wounds (W)</div>
           </div>
         </div>
       </section>
 
       <section>
-        <h2 id="sequence">Attacks are a sequence of steps</h2>
-
-        <p>
-          Every attack follows the same{" "}
-          <strong>5-step sequence to turn declaration into damage</strong>.
-        </p>
+        <h2 id="sequence">Every attack follows four steps</h2>
 
         <ol>
           <li>
@@ -67,280 +69,160 @@ export default async function Page() {
           <li>
             Roll to wound <BsFillDice6Fill />
           </li>
-          <li>Allocate wounds</li>
           <li>
-            Roll to save, either armor or invulnerable <BsFillDice6Fill />
+            Roll saves <BsFillDice6Fill />
           </li>
           <li>Inflict damage</li>
         </ol>
 
         <p>
-          The attack sequence is called an <strong>activation</strong> for
-          short. Three of the steps are dice rolls. The failure of one roll
-          shuts down the whole activation. Thus, the rolls are often called{" "}
-          <strong>gates</strong>. Each activation must pass 3 gates to score
-          damage.
+          An attack stops as soon as it fails a step or inflicts damage. When
+          several identical dice are rolled in a step, roll them together.
         </p>
 
         <h3 id="hit-roll">1. Roll to hit</h3>
 
-        <ol>
-          <li>
-            Roll a D6 <BsFillDice6Fill /> for each attack the weapon makes.
-          </li>
-
-          <li>
-            Check if the result is equal to or higher than the weapon's BS/WS .
-          </li>
-
-          <li>
-            On success, the attack hits the target. On fail, the activation
-            stops there.
-          </li>
-        </ol>
-
         <p>
-          An{" "}
+          Roll a D6 <BsFillDice6Fill /> for each attack. An unmodified 1 always
+          fails. An unmodified 6 is a <strong>critical hit</strong> - it can
+          trigger additional rules. Any other result{" "}
           <strong>
-            unmodified roll of 6 is a <em>critical hit</em>.
-          </strong>{" "}
-          Some weapon keywords care about critical hits.
+            hits if it equals or exceeds the weapon&apos;s BS or WS
+          </strong>
+          .
         </p>
 
         <h3 id="wound-roll">2. Roll to wound</h3>
 
-        <ol>
-          <li>
-            Roll a D6 <BsFillDice6Fill /> for each attack that hit during the
-            previous step.
-          </li>
-
-          <li>
-            Compare the weapon's S against the target's T using the table below.
-          </li>
-
-          <li>Based on the table, check if the result is a success.</li>
-
-          <li>
-            On success, the attack wounds the target. On fail, the activation
-            stops there.
-          </li>
-        </ol>
+        <p>
+          Roll a D6 <BsFillDice6Fill /> for every hit. An unmodified 1 always
+          fails, and an unmodified 6 is a <strong>critical wound</strong>. Other
+          results wound when they meet the required result below.
+        </p>
 
         <Table columns={woundRollColumns} data={woundRollRows} />
 
+        <h3 id="save-roll">3. Roll saves</h3>
+
         <p>
+          The defender first groups the target unit&apos;s models by their
+          Wounds, Save and Invulnerable Save characteristics. Each CHARACTER
+          model is its own group. They then declare the order in which those
+          groups will receive attacks.
+        </p>
+
+        <p>
+          A non-CHARACTER group that already contains a wounded model must come
+          first. Non-CHARACTER groups come before CHARACTER groups, and wounded
+          CHARACTER groups come before unwounded CHARACTER groups. This is why{" "}
+          <strong>damage normally stays on a wounded model</strong> instead of
+          being spread around the unit.
+        </p>
+
+        <p>
+          After declaring that order, roll a D6 <BsFillDice6Fill /> for every
+          wound. Do not apply AP or decide whether a save succeeds yet. That
+          happens as the results are resolved in the next step.
+        </p>
+
+        <p>
+          <strong>The allocation order sets the target.</strong> The first group
+          in the declared order is the <strong>current allocation group</strong>
+          . Once every model in it is destroyed, the next group becomes current.
+        </p>
+
+        <h3 id="damage">4. Inflict damage</h3>
+
+        <p>
+          Resolve save results from lowest to highest. For each result, select a
+          model in the current allocation group, choosing a wounded model if
+          possible. <strong>An unmodified 1 always inflicts damage.</strong>
+        </p>
+
+        <p>
+          Otherwise, an Invulnerable Save succeeds if the result meets the
+          group&apos;s InSv. If it does not, apply the weapon&apos;s AP to the
+          result and compare it with the group&apos;s Sv. A successful save
+          stops the attack. A failed save makes the selected model lose wounds
+          equal to the weapon&apos;s Damage.
+        </p>
+
+        <p>
+          <strong>When a model reaches 0 wounds, it is destroyed.</strong> If
+          the whole target unit is destroyed, any remaining attacks are lost.{" "}
           <strong>
-            An unmodified roll of 6 is a <em>critical wound</em>.
+            Excess damage from one attack does not carry over to another model.
           </strong>
         </p>
 
-        <h3 id="allocate-wounds">3. Allocate wounds</h3>
+        <h3 id="preventing-damage">
+          Feel No Pain is an additional gate that some models possess
+        </h3>
 
         <p>
-          After attacks wound, the{" "}
-          <strong>
-            defender chooses which target models will receive them
-          </strong>{" "}
-          (unless the weapons have Precision). They <em>must</em> choose models
-          that have already lost wounds first.
-        </p>
-
-        <h3 id="save-roll">4. Roll to save</h3>
-
-        <p>
-          Every datasheet has an <em>Armor Save</em>, but some have an
-          additional <em>Invulnerable save</em>. If you are the defender, and
-          the unit has an Invulnerable save, you can choose to roll for one of
-          them, but not both.
-        </p>
-
-        <p className="lead">Armor save (Sv)</p>
-
-        <ol>
-          <li>
-            Roll a D6 <BsFillDice6Fill /> for each attack that wounded.
-          </li>
-
-          <li>
-            Add the weapon's AP to the roll (usually a negative number that
-            reduces the result).
-          </li>
-
-          <li>
-            Check if the modified result is equal to or greater than the
-            target's Sv.
-          </li>
-
-          <li>
-            On success, damage is averted. On fail, the target takes the damage.
-          </li>
-        </ol>
-
-        <Divider />
-
-        <p className="lead">Invulnerable save (Inv/++) if target has one</p>
-
-        <ol>
-          <li>
-            Roll a D6 <BsFillDice6Fill /> for each attack that wounded.
-          </li>
-
-          <li>
-            Check if the result is equal to or greater than the target's Inv.
-          </li>
-
-          <li>
-            On success, damage is averted. On fail, the target takes the damage.
-          </li>
-        </ol>
-
-        <p>
-          Invulnerable saves ingnore armor and are preferable against high AP
-          attacks.
-        </p>
-
-        <p className="example">
-          For example, the Terminator Squad's excellent Sv2+ often bounces low
-          or no AP attack. Against a Meltagun (AP-4), which reduces the save to
-          6+, however, they will fare better if they use thier 4+ invulnerable
-          save.
-        </p>
-
-        <h3 id="preventing-damage">4.1 Feel no Pain (FNP)</h3>
-
-        <p>
-          Some units have an uncommon Feel No Pain X+ ability. It's simply a
-          rare extra gate.
-        </p>
-
-        <ol>
-          <li>
-            Roll a D6 <BsFillDice6Fill />
-          </li>
-
-          <li>Check if the result is equal to or greater than the FNP's X+.</li>
-
-          <li>On success, damage is averted.</li>
-        </ol>
-
-        <h3 id="damage">5. Inflict damage</h3>
-
-        <p>
-          After all rolls are done, only attacks that passed all gates inflict
-          damage. For each successful activation, a{" "}
-          <strong>
-            selected model loses wounds equal to the weapon's damage.
-          </strong>{" "}
-          An attack always damages a single model.{" "}
-          <strong>
-            Excess damage from one attack cannot be allocated to another target,
-            so it's lost.
-          </strong>
+          A Feel No Pain X+ ability is resolved while the damage is being
+          resolved, after an attack has inflicted damage. You roll a D6{" "}
+          <BsFillDice6Fill />. If the result is higher than X+, damage is
+          prevented.
         </p>
       </section>
 
       <section>
-        <h2 id="fast-dice">
-          Fast dice rolling <GiRollingDices />
-        </h2>
+        <h2 id="fast-dice">Roll identical attacks together</h2>
 
         <p>
-          Activations are probably the most dice intense moment of the game. If
-          the same weapons declare attacks against the same targets, you are
-          allowed, even encouraged, to roll for all activations at the same
-          time.
+          When attacks have the same profiles and target, roll all of their hit
+          and wound rolls together. The defender then makes the save rolls
+          together before resolving the results from lowest to highest.
         </p>
 
-        <p>
-          Number of Attacks per weapon multiplied by the number of models using
-          it, give you the number of dice to roll.
-        </p>
-
-        <p className="example">
-          For example, a 5-man Intercessor Squad declares ranged attacks against
-          some Ork Boyz. A Bolt Rifle makes 2 attacks, but the Intercessors have
-          a focus fire ability that doubles that to 4 attacks each. That's{" "}
-          <strong>20 attacks</strong> or 20 initial dice rolls. The Bolt Rifle
-          has BS3+ (2/3 chance to hit), so let's say 13 dice roll 3 or higher.
-        </p>
-
-        <p className="example">
-          Next, the 13 attacks that hit roll to wound. The Boyz are T5 while the
-          Bolt Rifles are S4, so the attacks wound on 5+ (1/3 chance, or 4-5
-          attacks on average out of 13). Let's say 5 attacks wound. The Boyz
-          have Sv5+, reduced to 6+ by the Bolt Rifle's AP-1. The defender rolls
-          5 save dice and passes 1.
-        </p>
-
-        <p className="example">
-          In the end, only 4 of the original 20 attacks deal damage. The Bolt
-          Rifle is D2, while the Boyz are W1, so 4 Boyz are removed from play.
-          The excess damage is lost.
-        </p>
+        <blockquote>
+          For example, five identical attacks make five hit rolls. If three hit,
+          make three wound rolls. If two wound, make two save rolls, then
+          resolve the lower save result first.
+        </blockquote>
       </section>
 
       <section>
-        <h2 id="probability">Probability</h2>
+        <h2 id="probability">A simple way to read attacks</h2>
 
         <p>
-          One failed gate is enough to stop the whole activation.{" "}
+          An attack must hit and wound, then the target must fail its save,
+          before it can deal damage. This is why{" "}
           <strong>
-            Even perfect attacks (2+ to hit, 2+ to wound, no save) have a 69.4%
-            success chance.
-          </strong>{" "}
-          The system is designed so no attack is ever guaranteed.
+            a weapon&apos;s profile matters as a whole, rather than individual
+            attributes
+          </strong>
+          . High Strength helps it wound, AP makes armour saves harder, and
+          Damage determines how many wounds a failed save costs.
         </p>
 
-        <h3 id="volume">Volume flattens variance</h3>
+        <h3 id="volume">More attacks make results more consistent</h3>
 
         <p>
-          A single high-damage attack can threaten a durable elite target, but
-          it is inconsistent. More dice make the result more reliable.
+          A single powerful attack can miss or fail to wound. More attacks give
+          you more chances to pass each step, so they usually produce a more
+          reliable result.
         </p>
 
-        <ul>
-          <li>
-            One attack with a 50% chance to succeed will either work or do
-            nothing.
-          </li>
-
-          <li>6 attacks at 50% usually produce 2-4 successes.</li>
-        </ul>
-
-        <h3 id="big-damage">Re-rolls plus critical effects equal big damage</h3>
+        <h3 id="big-damage">Damage must match the target</h3>
 
         <p>
-          Weapons with Sustained Hits
-          {", "}
-          Lethal Hits, or Devastating Wounds
-          {", "}
-          wielded by units with re-roll access, become primary damage dealers.
-          They get even better with Anti-KEYWORD X+ because it lowers the roll
-          needed for a critical wound.
-        </p>
-
-        <p className="example">
-          For example, a regular roll has a 16.7% chance to crit. A re-roll
-          raises that to 30.6%. An Anti-Infantry 5+ weapon attacking infantry
-          has a 33.3% chance to crit. With re-rolls, it becomes 55.6%.
-        </p>
-
-        <ul>
-          <li>Sustained Hits are better when you wound well (4+ or better).</li>
-
-          <li>Lethal Hits are better when you wound badly (5+ or worse).</li>
-        </ul>
-
-        <h3 id="skip-gates">Some gates can be skipped sometimes</h3>
-
-        <p>
+          High Damage is most useful when it matches a model&apos;s Wounds.{" "}
           <strong>
-            Torrent, Lethal Hits and Devastating Wounds skip certain gates
-          </strong>{" "}
-          and increase the success chance. The practical question is which gate
-          your weapon is weak into: hitting, wounding, saving throws, or damage
-          prevention.
+            Damage beyond the wounds needed to destroy one model is lost
+          </strong>
+          , so a D2 weapon is efficient against W2 models but wasteful against
+          W1 models.
+        </p>
+
+        <h3 id="skip-gates">Some rules change or skip a step</h3>
+
+        <p>
+          Weapon abilities can change the normal sequence. For example, Torrent
+          attacks automatically hit, while critical hits and wounds can trigger
+          other abilities. Read the weapon&apos;s rules before resolving its
+          dice.
         </p>
       </section>
     </>

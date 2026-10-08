@@ -13,6 +13,8 @@ import { GiNotebook } from "react-icons/gi";
 import { IoClose, IoMenu } from "react-icons/io5";
 
 import { getNavigationPages, type NavigationPage } from "@/app/siteMap";
+import { Breadcrumbs } from "@/app/ui/Breadcrumbs";
+import { PageNavigation } from "@/app/ui/PageNavigation";
 
 const SIDEBAR_ID = "site-navigation";
 
@@ -114,7 +116,9 @@ export function SiteShell({ children }: { children: ReactNode }) {
         </header>
 
         <main className="center-wrapper flex flex-1 flex-col py-16">
+          <Breadcrumbs />
           {children}
+          <PageNavigation />
         </main>
       </div>
 

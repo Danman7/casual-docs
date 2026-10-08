@@ -150,7 +150,7 @@ export default async function Page() {
           <li>
             To <strong>Advance</strong> instead, roll a D6 <BsFillDice6Fill />{" "}
             and add the result to M. The unit moves further, but cannot declare
-            a charge or shoot that turn, unless wielding an [ASSAULT] weapon.
+            a charge or shoot that turn, unless wielding an ASSAULT weapon.
           </li>
         </ul>
 
@@ -162,9 +162,8 @@ export default async function Page() {
         </p>
 
         <p>
-          If every model in a unit is within 3" of a <em>Transport</em>, that
-          unit may also <strong>Embark</strong> withing that Transport the same
-          turn.
+          If every model in a unit is within 3" of a TRANSPORT, that unit may
+          also <strong>Embark</strong> withing that Transport the same turn.
         </p>
 
         <h3 id="engaged">Engaged units can fall back</h3>
@@ -213,10 +212,10 @@ export default async function Page() {
 
         <ul>
           <li>Unengaged units that didn't advance may shoot normally.</li>
-          <li>Units that did advance may only shoot with [ASSAULT] weapons.</li>
+          <li>Units that did advance may only shoot with ASSAULT weapons.</li>
           <li>
-            Engaged units that din't advace may also shoot with [PISTOL] and
-            [CLOSE-QUARTER] weapons.
+            Engaged units that din't advace may also shoot with PISTOL and
+            CLOSE-QUARTER weapons.
           </li>
         </ul>
 
