@@ -19,89 +19,93 @@ export default function Page() {
           alt="Scorpion in Mortal Kombat 1"
           className="max-w-1/3 ml-4 float-right"
         />
+
         <p>
-          MK1's Scorpion <strong>lacks complex mechanics</strong>, encourages a{" "}
-          <strong>simple game plan</strong>, and{" "}
-          <strong>teaches fundamentals</strong>:
+          Scorpion is an{" "}
+          <strong>
+            honest low-complexity character. A sensible choice for beginners
+          </strong>
+          , built around two fundamentals: <strong>whiff-punish</strong> and{" "}
+          <strong>strike/throw</strong> stagger.
         </p>
 
         <p>
-          He is neither a zoner nor a rushdown character, but rather{" "}
-          <strong>feels most comfortable at mid-range</strong>. His offense is
-          honest, missing a true mix-up, relying on strike/throw stagger.
+          His safe long-reaching moves, many of which disjointed, make him feel{" "}
+          <strong>natural at mid-range</strong>. From there, he lets his
+          opponents move first, checking, catching and converting any clean hit
+          into a combo.
         </p>
 
         <p>
-          His moves are mostly direct, having something for every root scenario,
-          making him a <strong>safe choice for beginners</strong>. A guide for
-          Scorpion can be a guide for the game's basics. That being said, he can
-          be seen in high-level matches as well. His kit is modular enough for
-          him to work with any Kameo.
+          On his own, Scorpion's <strong>offense is limited</strong>. But his
+          kit is modular enough for him to{" "}
+          <strong>work with almost any Kameo</strong>, adding safer pressure,
+          new mix-ups, or easier conversions.
         </p>
       </section>
 
       <section>
-        <h2 id="tools">Top tools at a glance</h2>
+        <h2 id="tools">Main tools at a glance</h2>
 
         <p>
-          <strong>[2]</strong> 10f, -2, disjointed High with a{" "}
-          <strong>good reach</strong> that is a{" "}
-          <strong>prime mid-range neutral button.</strong>
+          <strong>[2], [2,1]:</strong> A long-reaching 10f -2{" "}
+          <em>disjointed</em> High that leads into a -6 Mid hit-confirm. The{" "}
+          <strong>best overall combination of speed, range and damage</strong>{" "}
+          for a neutral check into whiff-punish.
         </p>
 
         <p>
-          <strong>[2,1]</strong> -6 Mid <strong>principal hit-confirm</strong>,
-          balancing speed, reach and damage.
+          <strong>[1], [1,2], [1,2,2]:</strong> An all-purpose short-n-quick 7f,{" "}
+          <strong>+2 on block</strong> High jab. It continues into a -3 High
+          hit-confirm, ending in a -3 (-13 flawless) Overhead, bating an
+          up-block, good for stagger.
         </p>
 
         <p>
-          <strong>[1]</strong> Short, 7f, <strong>+2</strong> High jab, enabling
-          fast hit-confirms and staggers with its extensions.
+          <strong>[F+3]</strong> is a 12f -3 <strong>advancing Mid</strong>. The
+          basis of Scorpion's offense. Go for damage with the{" "}
+          <strong>[F+3,2]</strong> -6 High <em>launcher</em> that can be
+          repeated up to 3 times. If they duck under the High, respect them
+          instead with <strong>[F+3,4]</strong> -6 Mid-Mid.
         </p>
 
         <p>
-          <strong>[F+3]</strong> 12f, -3, advancing Mid, grounding Scorp's
-          staggered offense.
+          <strong>[B+2]</strong> Is the{" "}
+          <strong>chief answer to a jump-in</strong> - a 9f 0{" "}
+          <em>disjointed</em> High. It cancels nicely into Spear, easily
+          converting a successful anti-air into a combo.
         </p>
 
         <p>
-          <strong>[F+3,2]</strong> -6, Mid-High launcher that can be{" "}
-          <strong>repeated up to 3 times</strong> for an{" "}
-          <strong>optimal combo starter and extension</strong>. Second hit can
-          be ducked under for a counter.
-        </p>
-        <p>
-          <strong>[F+3,4]</strong> -6, Mid-Mid <strong>respect string</strong>{" "}
-          without a cancel. No more ducking under <strong>[F+3,2]</strong>.
+          <strong>[B+3]:</strong> A unique, very far-reaching,{" "}
+          <em>disjointed</em>, slow (21f), and unsafe (-19) two hit Mid-Low.
+          First hit can be cancelled. It{" "}
+          <strong>makes ground movement unsafe at range</strong>, but it's
+          easily punished if blocked.
         </p>
 
         <p>
-          <strong>[B+2]</strong> 9f, 0, disjointed High, making Scorpion
-          micro-duck. Can be cancelled into a special out of a jump-in,
-          constituting his <strong>main anti-air</strong>.
+          <strong>[B,F+1] Spear</strong> is the signature Scorpion full-screen
+          17f -28 High projectile that stuns on hit and restands the target next
+          to you. <em>A second Spear within the same combo drops them.</em> Very
+          punishable. <strong>Not a zoning tool.</strong> It mostly converts a
+          confirmed hit into a combo and catches careless movement at range.
         </p>
 
         <p>
-          <strong>[B+3]</strong> A unique, <strong>very far-reaching</strong>,
-          disjointed, 21f, -19, but 17 active frames, two hit Mid-Low. Only the
-          first hit can be cancelled. A long-range space-control commitment.
+          <strong>[D,B+2] Spin:</strong> 20f -25 Overhead{" "}
+          <strong>combo ender</strong> that can support knockdown pressure.
         </p>
 
         <p>
-          <strong>[B,F+1] Spear</strong> - Full-screen, 17f, -28, High
-          projectile that stuns on hit and restands the target next to you.{" "}
-          <em>A second Spear within the same combo drops them.</em> A lot of
-          space-control with 131 active frames, but unsafe and predictable.
+          <strong>[EX B,F+1] Charge:</strong> Scorpion's{" "}
+          <strong>armored</strong> 13f Mid answer to knockdown pressure from the
+          opponent. It's unsafe (-21).
         </p>
 
         <p>
-          <strong>[D,B+2] Spin</strong> - 20f, -25, 66 active frames Mid{" "}
-          <strong>optimal combo ender</strong> and occasional oki tool.
-        </p>
-
-        <p>
-          <strong>[EX B,F+1] Charge</strong> - 13f, -21,{" "}
-          <strong>armored</strong> Mid reversal that switches sides.
+          [B+2] and [B+3] can shortcut cancel into any B,F special. For example,
+          [B+2 &rarr; F+1] cancels into a Spear.
         </p>
       </section>
 
@@ -115,40 +119,27 @@ export default function Page() {
         />
 
         <p>
-          Scorpion <strong>covers good space, rather than overwhelms</strong> the
-          opponent. There is a button that makes movement risky for every
-          distance.
+          Scorpion's moves{" "}
+          <strong>cover good space, rather than overwhelm</strong> the opponent.
+          They can make movement risky at any distance. All of the following can
+          start a combo.
         </p>
 
         <ul>
-          <li>[2] catches approaches or whiffs from a few steps away.</li>
+          <li>[2] when they are a few steps away.</li>
 
-          <li>[B+2] catches jump-ins.</li>
+          <li>[B+2] when they jump.</li>
 
-          <li>[F+3] catches crouching.</li>
+          <li>[F+3] when they crouch a lot.</li>
 
-          <li>
-            [B+3] makes staying on the ground at jump + dash distance
-            uncomfortable. This tends to make them jump preemptively.
-          </li>
-
-          <li>
-            Spear catches dashes, whiffs, and sometimes jump-ins full-screen.
-          </li>
+          <li>[B+3] or [Spear] when they commit to ground movement.</li>
         </ul>
 
         <p>
-          All of the above can start a combo. So,{" "}
-          <strong>don't glue yourself to your foe</strong>. Scorpion is strong
-          when he stays at least at the edge of [2]'s reach and lets the
-          opponent move first.
-        </p>
-
-        <blockquote>Footsies &rarr; hit-confirm &rarr; combo</blockquote>
-
-        <p>
-          Block, wait, give up your turn when appropriate, and punish their
-          impatience. Your basic routine is the following:
+          <strong>Don't glue yourself to your foe.</strong> Make them move at
+          your range. Stand near the edge of [2]'s reach and watch.{" "}
+          <strong>Patience is key.</strong> Move in and out. Don't chase after
+          every blocked attack.
         </p>
 
         <ul>
@@ -162,21 +153,18 @@ export default function Page() {
           </li>
         </ul>
 
-        <p>
-          Switch the initial string as the situation dictates. [B+2] and [B+3]
-          can shortcut cancel into any B,F special. For example, [B+2 &rarr;
-          F+1] cancels into a Spear.
-        </p>
+        <p>Hold range &rarr; confirm the hit &rarr; take the combo.</p>
       </section>
 
       <section>
         <h2 id="offense">A staggered strike/throw offense</h2>
 
         <p>
-          Without a standing, cancellable Overhead or Low, Scorpion opens
-          players up through making them respect continuations, then stopping
-          early, using throws, delayed buttons, and situational challenges.{" "}
-          [F+3] is a natural anchor.
+          Going on the offense as Scorpion without Kameo support is limited.
+          Without a standing, cancellable Overhead or Low, he opens players up
+          through making them respect continuations, then stopping early, using
+          throws, delayed buttons, and situational challenges. [F+3] is a
+          natural anchor.
         </p>
 
         <ol>
@@ -349,8 +337,8 @@ export default function Page() {
         <p>
           <strong>Motaro</strong> is a reset/safety Kameo. No throw or armor
           conversions, but Scorpion gets his MK11 style Port, where he can keep
-          his distance if he doesn't hit-confirm. There are some resets available
-          with the tail projectile as well.
+          his distance if he doesn't hit-confirm. There are some resets
+          available with the tail projectile as well.
         </p>
 
         <p>
