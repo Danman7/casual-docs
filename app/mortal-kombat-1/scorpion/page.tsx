@@ -132,7 +132,9 @@ export default function Page() {
 
           <li>[F+3] when they crouch a lot.</li>
 
-          <li>[B+3] or [Spear] when they commit to ground movement.</li>
+          <li>
+            [B+3] or [Spear] when they commit to ground movement from afar.
+          </li>
         </ul>
 
         <p>
@@ -160,128 +162,102 @@ export default function Page() {
         <h2 id="offense">A staggered strike/throw offense</h2>
 
         <p>
-          Going on the offense as Scorpion without Kameo support is limited.
-          Without a standing, cancellable Overhead or Low, he opens players up
-          through making them respect continuations, then stopping early, using
-          throws, delayed buttons, and situational challenges. [F+3] is a
-          natural anchor.
-        </p>
-
-        <ol>
-          <li>[F+3,2] or [F+3,4] at first.</li>
-
-          <li>Then [F+3 &rarr; Throw / D+1 / Block]</li>
-        </ol>
-
-        <p>
-          You can risk getting closer and add [1] staggers. The full [1,2,2]
-          string ends in an Overhead, baiting an up-block. You can condition,
-          then follow up with:
+          Without a standing, cancellable Overhead or Low, Scorpion on his own
+          opens players up through respecting continuations, then stopping
+          early. <strong>Make blocked [F+3]s matter.</strong> Occasionally mix
+          in [1,2,2] staggers, knowing they can be punished.
         </p>
 
         <ul>
+          <li>[F+3,2] &rarr; they get hit &rarr; go for juggles into combo</li>
           <li>
-            [1 &rarr; 1] if they tend to counter after blocking and you can hit
-            the 2 frame window.
+            [F+3,2] &rarr; they block &rarr; disengage &rarr; [F+3 &rarr; Throw]
           </li>
 
           <li>
-            [1 &rarr; Backdash &rarr; 2] if they tend to counter with short
-            punches.
+            [F+3,2] &rarr; they duck &rarr; disengage &rarr; respect with
+            [F+3,4]
           </li>
 
-          <li>[1 &rarr; D+1] if they tend to counter with Highs.</li>
+          <li>
+            [F+3,4] &rarr; they block &rarr; disengage &rarr; [F+3 &rarr; Throw]
+          </li>
 
-          <li>[1 &rarr; Throw] if they tend to hold block.</li>
+          <li>
+            [1,2,2] &rarr; they block then tend to counter immediately &rarr;
+            disengage &rarr; [1 &rarr; 1] or [1 &rarr; Backdash &rarr; 2]
+          </li>
+
+          <li>
+            [1,2,2] &rarr; they keep blocking &rarr; disengage &rarr; [1 &rarr;
+            Throw]
+          </li>
         </ul>
 
         <p>
-          [1 &rarr; F+3] in case they do a [D+1] after blocking will{" "}
-          <em>not work</em> as the +2 on block is not enough to compensate the
-          12f start.
-        </p>
-
-        <p>
-          Going on the offense with Scorpion is not impractical. Rather more
-          limited than reacting to the opponent. You have to make them guess
-          whether you are going to continue, throw, or disengage.
+          Make them hesitate, then grab them or return to your range. It works
+          best when you choose the next commitment instead of forcing one after
+          every block.
         </p>
       </section>
 
       <section>
         <h2 id="combos">Combos - high reward from simple confirms</h2>
         <p>
-          Scorpion can{" "}
-          <strong>convert almost any whiff into good damage</strong>. His main
-          routes are also not mechanically exotic, in the sense of over the top
-          buttons and timings. At first you only need to remember that:
+          Scorpion's main routes are not mechanically exotic from over the top
+          buttons and timings. Most normals need a Spear to convert. [F+3,2]
+          already launches, so you can save Spear for later. The question is
+          when to spend Spear, not which route to memorize first.
         </p>
+
         <ul>
-          <li>Optimal routes go through a [F+3,2] juggle.</li>
           <li>A second Spear in a combo drops the opponent.</li>
-        </ul>
-        <p>
-          <strong>Spear starts or extends the juggle.</strong> Then it becomes
-          simply "When will I use Spear and how many juggles can I do?" given
-          gravity scaling.
-        </p>
-
-        <h3 id="blocks">Building blocks</h3>
-
-        <p>
-          Scorpion's universal conversion is{" "}
-          <strong>[Starter &rarr; Spear]</strong>.
-        </p>
-        <ul>
-          <li>[2,1 &rarr; B,F+1] - best of damage, reach, and speed.</li>
-          <li>[1,2 &rarr; B,F+1]</li>
-          <li>[F+3 &rarr; B,F+1]</li>
-
-          <li>[B+2 &rarr; F+1] - reduces air budget</li>
-          <li>[B+3 &rarr; F+1] - scales better over longer combos</li>
-        </ul>
-        <p>
-          That consumes Spear early, changing continuations after the juggle.
-        </p>
-
-        <ul>
-          <li>3 juggles for grounded routes.</li>
-          <li>2 juggles for air, [B+2], and some Kameo routes.</li>
+          <li>Optimal routes go through a [F+3,2] juggle.</li>
         </ul>
 
-        <p>
-          [jump &rarr; air 1,2] opens the <em>air branch</em>, while [EX air
-          D,B+2] consumes a bar to extend it.
-        </p>
-
-        <p>Then there are the natural enders:</p>
+        <p>Building blocks can be reused.</p>
 
         <ul>
           <li>
-            [3,3,3 &rarr; B,F+2] is simplest, and deals more damage, but depends
-            on the air budget.
+            <strong>Starter:</strong> Confirm [2,1], [1,2], or [F+3] into
+            [B,F+1]. Or [F+3,2] into a juggle.
           </li>
-          <li>[3,3 &rarr; D,B+2] is always available after a Spear.</li>
+
+          <li>
+            <strong>Juggle:</strong> [F+3,2]. 3 juggles for grounded routes. 2
+            juggles for air, [B+2] (reduced air budget), and some Kameo routes.
+          </li>
+
+          <li>
+            <strong>Air extension:</strong> [jump &rarr; air 1,2], extended for
+            1 bar by [EX air D,B+2].
+          </li>
+
+          <li>
+            <strong>Ender:</strong> [3,3,3 &rarr; B,F+2] is simplest, and deals
+            more damage, but depends on the air budget. [3,3 &rarr; D,B+2] is
+            always available after a Spear.
+          </li>
         </ul>
 
-        <h3 id="routes">Route examples</h3>
+        <p>Here are some examples.</p>
 
         <p>
-          <strong>Easy conversion</strong>
+          <strong>Start simple</strong>
           <br />
           [Starter &rarr; B,F+1 &rarr; 3,3,3 &rarr; B,F+2]{" "}
           <sup>217-227 DMG</sup>
         </p>
 
         <p>
-          <strong>Meterless BnB</strong>
+          <strong>Ground bread-n-butter (BnB)</strong>
           <br />
           [Starter &rarr; B,F+1 &rarr; (F3,2)<sup>x3</sup> &rarr; F3,4 &rarr;
           B,F+2] <sup>332-349 DMG</sup>
         </p>
 
         <p>
-          <strong>Air extension - 1 bar</strong>
+          <strong>One-bar air route</strong>
           <br /> [Starter &rarr; B,F+1 &rarr; (F3,2)<sup>x2</sup> &rarr; jump
           &rarr; air 1,2 &rarr; EX air D,B+2 &rarr; delayed air 1,1,1 close to
           ground &rarr; air D,B+2] <sup>367-385 DMG</sup>
@@ -295,17 +271,17 @@ export default function Page() {
         </p>
 
         <p>
-          <strong>Air late Spear - 1 bar</strong>
+          <strong>One-bar late Spear air route</strong>
           <br />
           [(F3,2)<sup>x2</sup> &rarr; jump &rarr; air 1,2 &rarr; EX air D,B+2
           &rarr; delayed air 1,1,1 &rarr; land &rarr; B,F+1 &rarr; 3,3 &rarr;
           DB2] <sup>407 DMG</sup>
         </p>
 
-        <blockquote>
+        <p>
           Get a launch &rarr; Juggle &rarr; Choose ground or air branch based on
           meter &rarr; End based on Spear
-        </blockquote>
+        </p>
       </section>
 
       <section>
@@ -314,45 +290,52 @@ export default function Page() {
         </h2>
 
         <p>
-          With Kameo support, Scorpion can break away from defense and staggers,
-          and push harder.
+          Scoprion can push harder with Kameo assists and cover attacks that
+          would otherwise end his turn. While recharging, he goes back to
+          spacing and staggers.
         </p>
 
         <p>
-          <strong>Mavado</strong> is the safe, easy all-around buff. [Throw],
-          [EX B,F+2], [2,1,4] and [F+3,4] become combo starters, providing Throw
-          and Armor routes. Air extension can use Kameo instead of meter, for
-          just a bit less damage. You can break armor with the slide if timed
-          right.
+          <strong>Mavado</strong> is a practical first choice. He converts
+          [Throw], armored Charge, [2,1,4], and [F+3,4] into combos, while also
+          making air extensions meterless.
         </p>
 
         <p>
-          <strong>Ferra</strong> supplies an actual chainable Overhead/Low mix,
-          which combines especially well with [B+3]. If you call her to
-          Scorpion's back, but micro-step forward instead of immediately
-          hitting, it can reset a combo. Like Mavado, she also adds Throw
-          routes, but not Armored routes.
+          <strong>Ferra</strong> gives a command grab, and an Overhead/Low mix,
+          which combines well with [B+3] and can be micro-delayed for a reset.
+          She makes opponents fear blocking as much as moving.
         </p>
 
         <p>
-          <strong>Motaro</strong> is a reset/safety Kameo. No throw or armor
-          conversions, but Scorpion gets his MK11 style Port, where he can keep
-          his distance if he doesn't hit-confirm. There are some resets
-          available with the tail projectile as well.
+          <strong>Janet Cage</strong> also turns [Throw] and armored Charge into
+          combos, also can extend air routes without meter, and supports strong
+          corner damage, but requires more precise timings.
         </p>
 
         <p>
-          If you have the skill <strong>Janet</strong> comes close to a more
-          resource-efficient Mavado. She enables throw and armor combos, as well
-          as meterless air extensions, while recharging quickly.
+          <strong>Khameleon</strong> is another demaning, but flexible partner,
+          that changes what she offers as her form rotates. Kitana helps with
+          lifts and resets, Mileena adds an overhead, and Jade offers projectile
+          protection and a mid extension.
         </p>
 
         <p>
-          <strong>Khameleon</strong> is a very flexible option, again provided
-          you have the skill. Kitana does resets, Mileena adds an Overhead and
-          easy extensions, and Jade adds a Mid extender plus projectile
-          protection. As with any main, however, having the right tool at a time
-          is inconsistent.
+          <strong>Motaro</strong> covers risky commitments and creates more room
+          for pressure or a reset with staggers. His teleports suit a player who
+          wants to keep control of spacing after an attack.
+        </p>
+
+        <p>
+          <strong>Jax</strong> can cover Spin or any simple knockdown pressure,
+          plus he gives armored conversions. His assists are delayed, requiring
+          more planning that Movad's, but support Scorpion post-commitment.
+        </p>
+
+        <p>
+          <strong>Tremor</strong> is for layered setups after a knockdown. He
+          covers Spin, extends pressure, and makes the opponent defend another
+          sequence.
         </p>
       </section>
     </>
