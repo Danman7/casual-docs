@@ -202,7 +202,7 @@ export default function Page() {
       </section>
 
       <section>
-        <h2 id="combos">Combos - high reward from simple confirms</h2>
+        <h2 id="combos">Combos: high reward from simple confirms</h2>
         <p>
           Scorpion's main routes are not mechanically exotic from over the top
           buttons and timings. Most normals need a Spear to convert. [F+3,2]

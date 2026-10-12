@@ -70,6 +70,24 @@ export const siteMap = {
             description: "Learn how Scorpion plays in Mortal Kombat 1.",
           },
         },
+        {
+          href: "/mortal-kombat-1/general-shao",
+          title: "General Shao",
+          metadata: {
+            title: "General Shao",
+            description:
+              "Learn General Shao's Axe spacing, No Axe pressure, stance transitions, and starting combos in Mortal Kombat 1.",
+          },
+        },
+        {
+          href: "/mortal-kombat-1/sub-zero",
+          title: "Sub-Zero",
+          metadata: {
+            title: "Sub-Zero",
+            description:
+              "Learn Sub-Zero's spacing, Ice Klone setups, counterzoning, and starting combos in Mortal Kombat 1.",
+          },
+        },
       ],
     },
     {
