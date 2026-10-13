@@ -126,6 +126,15 @@ export const siteMap = {
               "Learn the common Warhammer 40,000 unit profile archetypes and what their characteristics mean.",
           },
         },
+        {
+          href: "/warhammer-40k/space-marines",
+          title: "Space Marines",
+          metadata: {
+            title: "Space Marines",
+            description:
+              "The faction of Space Marines in WH40k, their playstyle, pros and cons.",
+          },
+        },
       ],
     },
   ],
@@ -156,10 +165,7 @@ function findPage(page: SitePage, href: string): SitePage | undefined {
   }
 }
 
-function findParentPage(
-  page: SitePage,
-  href: string,
-): SitePage | undefined {
+function findParentPage(page: SitePage, href: string): SitePage | undefined {
   if (page.children?.some((child) => child.href === href)) {
     return page;
   }
@@ -216,10 +222,7 @@ export function getBreadcrumbs(href: string): readonly BreadcrumbPage[] {
 export function getPageNavigation(href: string): PageNavigation {
   const parent = findParentPage(siteMap, href);
 
-  if (
-    !parent ||
-    !siteMap.children.some((page) => page.href === parent.href)
-  ) {
+  if (!parent || !siteMap.children.some((page) => page.href === parent.href)) {
     return {};
   }
 

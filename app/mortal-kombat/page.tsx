@@ -1,6 +1,7 @@
 import Image from "next/image";
 import MKLogo from "../../public/mk/mk_logo.webp";
 import { SourceLink } from "../ui/SourceLink";
+import { PageContents } from "../ui/PageContents";
 import { getPage } from "@/app/siteMap";
 import {
   TbCircleNumber1,
@@ -48,6 +49,8 @@ export default function Page() {
           <em>NRS</em> era, which will be the focus of this section.
         </p>
       </section>
+
+      <PageContents pages={mortalKombatPage.children ?? []} />
 
       <section>
         <h2 id="our-sources">Our sources</h2>

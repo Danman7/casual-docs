@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { getPage } from "@/app/siteMap";
+import { PageContents } from "@/app/ui/PageContents";
 import { SourceLink } from "@/app/ui/SourceLink";
 import Warhammer40k from "../../public/wh40k/warhammer-40k.webp";
 
@@ -46,10 +47,12 @@ export default async function Page() {
         </p>
       </section>
 
+      <PageContents pages={warhammerPage.children ?? []} />
+
       <section>
         <h2 id="our-sources">Our sources</h2>
 
-        <div className="flex-list">
+        <div className="list">
           <SourceLink href="https://wahapedia.ru/" text="Wahapedia" />
 
           <SourceLink
@@ -65,6 +68,12 @@ export default async function Page() {
           <SourceLink
             href="https://www.youtube.com/@auspextactics"
             text="Auspex Tactics"
+            type="youtube"
+          />
+
+          <SourceLink
+            href="https://www.youtube.com/@ArtofWar40k"
+            text="Art of War 40k"
             type="youtube"
           />
 

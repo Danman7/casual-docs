@@ -2,6 +2,7 @@ import { getPage } from "@/app/siteMap";
 import Image from "next/image";
 import MK1Logo from "../../public/mk1/logo.webp";
 import { SourceLink } from "../ui/SourceLink";
+import { PageContents } from "../ui/PageContents";
 
 const mortalKombatPage = getPage("/mortal-kombat-1");
 
@@ -30,6 +31,8 @@ export default function Page() {
           pressure, and more player expression.
         </p>
       </section>
+
+      <PageContents pages={mortalKombatPage.children ?? []} />
 
       <section>
         <h2 id="our-sources">Our sources</h2>

@@ -53,6 +53,7 @@ export default async function Page() {
         <h3 id="geq">GEQ a.k.a. Light Infantry or Horde [T3 W1]</h3>
 
         <Image
+          loading="eager"
           src={CadianShock}
           alt="Cadian Shock Troops in Warhammer 40K"
           className="side-img sm:max-w-1/3"
@@ -78,10 +79,9 @@ export default async function Page() {
       </section>
 
       <section>
-        <h3 id="meq">MEQ a.k.a. Marines [T4 W2 3+]</h3>
+        <h3 id="meq">MEQ a.k.a. Marines [T5 W2 3+]</h3>
 
         <Image
-          loading="eager"
           src={Intercessors}
           alt="Intercessors in Warhammer 40K"
           className="side-img sm:max-w-1/3"
@@ -93,20 +93,21 @@ export default async function Page() {
             most common <em>exact</em> non-character profile
           </strong>{" "}
           in the game. Sometimes called <em>standard</em> or{" "}
-          <em>medium infantry</em>, they are a combination of decent Toughness,
-          two wounds and good armour.
+          <em>medium infantry</em>, they are a combination of good Toughness and
+          armor, with two wounds.
         </p>
 
         <p>
           <strong>D2 is key</strong> here, because every failed save can remove
           a model. S5+ and some AP are also desirable. The{" "}
-          <strong>Heavy Bolter</strong> [S5 AP-1 D2] is the textbook anti-MEQ
-          weapon. A supercharged Plasma Gun also works well.
+          <strong>Focused Bolt Rifle</strong> [S6 AP-1 D2] and{" "}
+          <strong>Supercharged Plasma Gun</strong> [S8 AP-3 D2] are the textbook
+          anti-MEQ weapons.
         </p>
       </section>
 
       <section>
-        <h3 id="teq">TEQ a.k.a Terminators [T5 W3 2+/4++]</h3>
+        <h3 id="teq">TEQ a.k.a Terminators [T6 W3 2+/4++]</h3>
 
         <Image
           src={Terminators}
@@ -116,18 +117,15 @@ export default async function Page() {
 
         <p>
           This is <strong>heavy durable infantry</strong> protected by excellent
-          armor. There are much fewer datasheets than any other group, but
-          Terminators are <strong>not simply MEQ+</strong>.
+          armor that blunts light arms.
         </p>
 
         <p>
-          Light arms struggle a lot here. The profile naturally expects D3
-          weapons with very good Strength, but the{" "}
-          <strong>invulnerable save</strong> puts a limit on how effective AP
-          can be. Anything above AP-2 normally has no further benefit before
-          modifiers. Thus, the presence of TEQ on the field requires proper gear
-          like a supercharged Heavy Plasma Cannon, Reaper launcher, or Rail
-          Rifle.
+          The profile naturally expects D3 weapons with very good Strength, but
+          the <strong>invulnerable save</strong> puts a limit on how effective
+          AP can be. Anything above AP-2 normally has no further benefit before
+          modifiers. <strong>Supercharged Heavy Plasma Cannon</strong> and{" "}
+          <strong>Reaper Launcher</strong> [S10 AP-2 D3] work well.
         </p>
       </section>
 
@@ -137,18 +135,20 @@ export default async function Page() {
         <h3 id="armor-geq">Armored GEQ [GEQ + 3+]</h3>
 
         <p>
-          Battle Sisters are <strong>GEQ with better armor</strong>. Still easy
-          to wound, but effectiveness moves away from Flamers and any Lasgun
-          towards massed Bolt Rifles and standard Plasma.
+          <strong>GEQ with better armor</strong>. Still easy to wound, but
+          effectiveness moves away from Flamers and any Lasgun towards some AP
+          like Bolt Rifles and standard Plasma.
         </p>
 
-        <h3 id="gravis">Heavy (Gravis) infantry [T5-6 W3 3+]</h3>
+        <h3 id="gravis">Heavy (Gravis) infantry [T6 W3 3+]</h3>
 
         <p>
           This is <strong>actual MEQ+</strong> - a step above Marines, but{" "}
           <strong>not quite Terminators</strong>. The name comes from Heavy
-          Intercessors that wear Gravis armor. D2 becomes inefficient. Heavy
-          Plasma Cannon and Autocannon perform well.
+          Intercessors that wear Gravis armor. D2 becomes inefficient.{" "}
+          <strong>
+            Autocannon [S9 AP-1 D3] performs against Gravis profiles.
+          </strong>
         </p>
       </section>
 
@@ -169,9 +169,8 @@ export default async function Page() {
         <p>
           Around a quarter of the vehicles and monsters in WH40k are tough
           enough to hinder conventional weapons, but still vulnerable to
-          medium-strength attacks. The <strong>Autocannon</strong> [S9 D3] does
-          more attacks of enough damage, while the <strong>Melta</strong> [S9
-          AP-4 D6] trades volume for quality.
+          medium-strength attacks. The <strong>Meltagun</strong> [S9 AP-4 D6]
+          offesrs good AP and potential damage.
         </p>
 
         <h3 id="medium">Medium Armor [T10-11]</h3>
