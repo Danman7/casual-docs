@@ -136,14 +136,24 @@ export const siteMap = {
           },
           children: [
             {
-              href: "/warhammer-40k/space-marines/units",
-              title: "Units",
+              href: "/warhammer-40k/space-marines/infantry",
+              title: "Infantry",
               metadata: {
-                title: "Space Marines Units",
-                description: "Units of the Space Marines faction in Warhammer 40,000.",
+                title: "Space Marines Infantry",
+                description:
+                  "Units of the Space Marines faction in Warhammer 40,000.",
               },
             },
           ],
+        },
+        {
+          href: "/warhammer-40k/orks",
+          title: "Orks",
+          metadata: {
+            title: "Orks",
+            description:
+              "The faction of Orks in WH40k, their playstyle, pros and cons.",
+          },
         },
       ],
     },
@@ -216,8 +226,8 @@ export function getBreadcrumbs(href: string): readonly BreadcrumbPage[] {
 }
 
 export function getPageNavigation(href: string): PageNavigation {
-  const section = siteMap.children.find(
-    (page) => href.startsWith(`${page.href}/`),
+  const section = siteMap.children.find((page) =>
+    href.startsWith(`${page.href}/`),
   );
 
   if (!section) {
@@ -232,9 +242,7 @@ export function getPageNavigation(href: string): PageNavigation {
   }
 
   return {
-    ...(currentPageIndex > 0
-      ? { previous: pages[currentPageIndex - 1] }
-      : {}),
+    ...(currentPageIndex > 0 ? { previous: pages[currentPageIndex - 1] } : {}),
     ...(currentPageIndex < pages.length - 1
       ? { next: pages[currentPageIndex + 1] }
       : {}),

@@ -6,7 +6,7 @@ import Link from "next/link";
 import Intercessors from "../../../../public/wh40k/intercessor.webp";
 import AssaultIntercessors from "../../../../public/wh40k/assault-intercessor.webp";
 
-const unitsPage = getPage("/warhammer-40k/space-marines/units");
+const unitsPage = getPage("/warhammer-40k/space-marines/infantry");
 const archetypesPage = getPage("/warhammer-40k/archetypes");
 
 export const metadata = unitsPage.metadata;
@@ -103,8 +103,7 @@ export default function Page() {
         </div>
 
         <p>
-          <strong>Profile:</strong> M6"{" "}
-          <Link href={`${archetypesPage.href}#meq`}>MEQ</Link> + OC2
+          <strong>Profile:</strong> M6" MEQ + OC2
         </p>
 
         <p>
