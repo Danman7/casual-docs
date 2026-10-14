@@ -134,6 +134,16 @@ export const siteMap = {
             description:
               "The faction of Space Marines in WH40k, their playstyle, pros and cons.",
           },
+          children: [
+            {
+              href: "/warhammer-40k/space-marines/units",
+              title: "Units",
+              metadata: {
+                title: "Space Marines Units",
+                description: "Units of the Space Marines faction in Warhammer 40,000.",
+              },
+            },
+          ],
         },
       ],
     },
@@ -161,20 +171,6 @@ function findPage(page: SitePage, href: string): SitePage | undefined {
 
     if (match) {
       return match;
-    }
-  }
-}
-
-function findParentPage(page: SitePage, href: string): SitePage | undefined {
-  if (page.children?.some((child) => child.href === href)) {
-    return page;
-  }
-
-  for (const child of page.children ?? []) {
-    const parent = findParentPage(child, href);
-
-    if (parent) {
-      return parent;
     }
   }
 }
@@ -220,23 +216,33 @@ export function getBreadcrumbs(href: string): readonly BreadcrumbPage[] {
 }
 
 export function getPageNavigation(href: string): PageNavigation {
-  const parent = findParentPage(siteMap, href);
+  const section = siteMap.children.find(
+    (page) => href.startsWith(`${page.href}/`),
+  );
 
-  if (!parent || !siteMap.children.some((page) => page.href === parent.href)) {
+  if (!section) {
     return {};
   }
 
-  const siblings = parent.children ?? [];
-  const currentPageIndex = siblings.findIndex((page) => page.href === href);
+  const pages = flattenPages(section.children);
+  const currentPageIndex = pages.findIndex((page) => page.href === href);
+
+  if (currentPageIndex === -1) {
+    return {};
+  }
 
   return {
     ...(currentPageIndex > 0
-      ? { previous: siblings[currentPageIndex - 1] }
+      ? { previous: pages[currentPageIndex - 1] }
       : {}),
-    ...(currentPageIndex < siblings.length - 1
-      ? { next: siblings[currentPageIndex + 1] }
+    ...(currentPageIndex < pages.length - 1
+      ? { next: pages[currentPageIndex + 1] }
       : {}),
   };
+}
+
+function flattenPages(pages: readonly SitePage[]): readonly SitePage[] {
+  return pages.flatMap((page) => [page, ...flattenPages(page.children ?? [])]);
 }
 
 function toNavigationPage(

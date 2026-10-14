@@ -35,6 +35,10 @@
   @apply flex flex-wrap gap-4;
 }
 
+@utility inlist {
+  @apply list gap-2;
+}
+
 @utility icon-text {
   @apply flex gap-2 items-center;
 }

@@ -1,10 +1,11 @@
 import { getPage } from "@/app/siteMap";
-import SpaceMarine from "../../../public/wh40k/space-marine.webp";
 import Image from "next/image";
 import Link from "next/link";
+import SpaceMarine from "../../../public/wh40k/space-marine.webp";
 
 const spaceMarinesPage = getPage("/warhammer-40k/space-marines");
 const archetypesPage = getPage("/warhammer-40k/archetypes");
+const roundPage = getPage("/warhammer-40k/battle-round");
 
 export const metadata = spaceMarinesPage.metadata;
 
@@ -23,14 +24,22 @@ export default async function Page() {
 
         <p>
           <strong>
-            Space Marines are an adaptable faction of elite units, built around
+            Space Marines are a pliant faction of durable units, built around
             coordinated attacks, and choosing the right moment to commit.
-          </strong>
+          </strong>{" "}
+          Good if you enjoy combining shooting, melee, and movement, with ways
+          to adapt during the battle.
         </p>
 
         <p>
-          They are sometimes referred to by their formal latin name{" "}
-          <em>Adeptus Astartes</em> or just Astartes.
+          Straightforward units make them approachable. Coordinating them gives
+          them depth.
+        </p>
+
+        <p>
+          They are referred to by their formal latin name{" "}
+          <em>Adeptus Astartes</em> on their datasheets. Sometimes just
+          Astartes.
         </p>
 
         <h2 id="pros">One collection, many playstyles</h2>
@@ -38,29 +47,27 @@ export default async function Page() {
         <p>
           <strong>Marines are a broad toolkit.</strong> They have ranged
           specialists, melee specialists, tanks, transports, infiltration, deep
-          strike, and a lot of named characters. You can field most battlefield
-          roles.
+          strike, and a lot of named characters.
         </p>
 
         <p>
           <strong>
-            Regular squads are durable with a lot of objectives utility.
+            Regular squads are tough with a lot of objectives utility.
           </strong>{" "}
           Most units are at least T5{" "}
-          <Link href={`${archetypesPage.href}#meq`}>MEQ</Link> infantry, which
-          helps with incoming fire while holding objectives. Intercessors can
-          shoot and perform actions at the same time, while Scouts can start
-          actions after advancing or falling back. Therefore scoring doesn't
-          need to consume a key damage dealer.
+          <Link href={`${archetypesPage.href}#meq`}>MEQ</Link>, so they can hold
+          objectives under fire. Intercessors can shoot and act at the same
+          time, while Scouts can act after advancing or falling back. Scoring
+          doesn't need to consume elite damage dealers.
         </p>
 
         <p>
           <strong>
-            The faction's flexibility is supported both in movement and weapons.
+            The faction's flexibility is visible in movement and weapons.
           </strong>{" "}
           Combat Doctrines help with reaching targets, repositioning while
-          shooting, or escaping in time. Intercessors choose between volume and
-          strength. Specialists often have multiple loadouts for different
+          shooting, or escaping in time. Intercessors can choose between volume
+          or strength. Specialists often have multiple loadouts for different
           targets.
         </p>
       </section>
@@ -71,7 +78,7 @@ export default async function Page() {
         </h2>
 
         <p>
-          <strong>Loosing a squad matters.</strong> D2 AP weapons can punish
+          <strong>Loosing a squad matters.</strong> D2 AP weapons threaten
           carelessly exposed regular infantry. At the same time, using expensive
           troops for screening or minor tasks is unsustainable.
         </p>
@@ -86,8 +93,76 @@ export default async function Page() {
         <p>
           <strong>Many units overlap.</strong> Or they have an unclear role.
           Perhaps the result of being the "frontmen" of Warhammer 40,000, Space
-          Marines roster is indeed large, but somewhat bloated.
+          Marines' roster is large, but somewhat bloated.
         </p>
+      </section>
+
+      <section>
+        <h2 id="doctrines">Doctrines are once-per-round action windows</h2>
+
+        <p>
+          As Space Marnes, at the start of your{" "}
+          <Link href={`${roundPage.href}#command-phase`}>Command Phase</Link>{" "}
+          you may select one combat doctrine which will be active untill your
+          next Command Phase.
+        </p>
+
+        <ul>
+          <li>
+            <strong>Devastator:</strong> Ranged weapons gain [ASSAULT], so your
+            army can advance without sacrificing shooting.
+          </li>
+
+          <li>
+            <strong>Assault:</strong> Units can charge after advancing, so your
+            melee line can commit from further away.
+          </li>
+
+          <li>
+            <strong>Tactical:</strong> Shoot and charge after falling back, so
+            units can escape a bad engagement, then counterattack.
+          </li>
+        </ul>
+
+        <p>
+          Planning movement and coordinating multiple units becomes central to
+          the faction. Some detachments grant additional uses.
+        </p>
+      </section>
+
+      <section>
+        <h2 id="chapters">Forces are segmented in Chapters</h2>
+
+        <ul>
+          <li>
+            <strong>A second faction keyword states the unit’s Chapter.</strong>{" "}
+            For example, Roboute Guilliman is both [ADEPTUS ASTARTES] and
+            [ULTRAMARINES].
+          </li>
+
+          <li>
+            You cannot include units from more than one Chapter in your army.
+          </li>
+        </ul>
+
+        <p>
+          A unit without a chapter is a <em>base unit</em>. You may not choose a
+          chapter and play only base units. But you always choose a detachment.
+          Chapter and detachment work together.
+        </p>
+
+        <ul>
+          <li>
+            <strong>Chapter</strong> determines your exclusive units and
+            characters. For example, taking Blood Angels units commits you to
+            Blood Angels. You can’t mix in Ultramarines or Space Wolves.
+          </li>
+          <li>
+            <strong>Detachment</strong> determines your army’s playstyle and
+            bonuses. For example, Blood Angels can use a generic Marine
+            detachment or one of their Chapter-specific ones.
+          </li>
+        </ul>
       </section>
     </>
   );
