@@ -234,7 +234,19 @@ export function getPageNavigation(href: string): PageNavigation {
     return {};
   }
 
-  const pages = flattenPages(section.children);
+  const pages = flattenPages(section.children).map((page) => {
+    const title = page.metadata.title;
+
+    return {
+      href: page.href,
+      title:
+        typeof title === "string"
+          ? title
+          : "absolute" in title
+            ? title.absolute
+            : title.default,
+    };
+  });
   const currentPageIndex = pages.findIndex((page) => page.href === href);
 
   if (currentPageIndex === -1) {
