@@ -9,6 +9,7 @@ import HeavyIntercessors from "../../../../public/wh40k/heavy-intercessor.webp";
 import Eliminators from "../../../../public/wh40k/eliminators.webp";
 
 const unitsPage = getPage("/warhammer-40k/space-marines/infantry");
+const roundPage = getPage("/warhammer-40k/battle-round");
 const archetypesPage = getPage("/warhammer-40k/archetypes");
 
 export const metadata = unitsPage.metadata;
@@ -48,43 +49,46 @@ export default function Page() {
           <strong>Cost:</strong> 85/5 or 170/10
         </p>
 
+        <div>
+          <strong>Key loadout:</strong>{" "}
+          <ul>
+            <li>Bolt Rifle (Default) [24" 3+ AP-1] [RAPID FIRE 1]</li>
+            <li>
+              Grenade Launcher (1-in-5){" "}
+              <ul>
+                <li>Frag [A4 S4 AP-1 D1] [BLAST 1]</li>
+                <li>Krak [A1 S10 AP-2 D3] [RAPID FIRE 1]</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
         <p>
-          <strong>Default loadout:</strong> Bolt Pistol, Bolt Rifle, and Knives
-          and Fists
+          <strong>Tactical Mainstay:</strong> Can act even while engaged or{" "}
+          <Link href={`${roundPage.href}#battle-shock-test`}>
+            Battle-shocked
+          </Link>
+          , and shoot while acting.
         </p>
 
         <p>
-          <strong>Intercessors are general-purpose ranged infantry.</strong>{" "}
-          They are supple enough to advance, defend, engage light infantry, and
-          do objectives all together.
+          <strong>Bolter Discipline:</strong> +1 to hit if either this unit or
+          the target is on an objective.
         </p>
 
         <p>
-          <strong>
-            Their primary role is flexible anti-infantry fire support.
-          </strong>{" "}
-          The Bolt Rifles [24" 3+ AP-1] [RAPID FIRE 1] have two firing modes:
-          anti-<Link href={`${archetypesPage.href}#geq`}>GEQ</Link>{" "}
+          Intercessors are simply ranged general-purpose infantry. They are
+          supple enough to advance, defend, engage light infantry, and do
+          objectives all together. They fill gaps so well that a squad is almost
+          never a bad idea, but not always necessary.
+        </p>
+
+        <p>
+          The Bolt Rifle has two firing modes: anti-
+          <Link href={`${archetypesPage.href}#geq`}>GEQ</Link>{" "}
           <em>Saturation</em> [S5, D1] and anti-MEQ <em>Focused Fire</em> [S6,
           D2]. You also can, and should, attach one Grenade Launcher per 5
-          Rifles for better reach against both hordes and tougher units.
-        </p>
-
-        <p>
-          <strong>
-            Their secondary role is objective control and mission utility.
-          </strong>{" "}
-          The <em>Tactical Mainstay</em> ability allows them to act even while
-          engaged or Battle-shocked, and shoot while acting.{" "}
-          <em>Bolter Discipline</em> grants +1 to hit (improves 3+ to 2+) if
-          either the Intercessors or their target is on an objective. [RAPID
-          FIRE 1] adds 1 attack at 12". They can fight on objectives and
-          complete missions at the same time.
-        </p>
-
-        <p>
-          A five-man Intercessor squad is never a bad idea, but first check if
-          your army even needs general-purpose support.
+          Rifles for some reach against both hordes and tougher infantry.
         </p>
       </section>
 
@@ -117,7 +121,7 @@ export default function Page() {
         </p>
 
         <div>
-          <strong>Loadout:</strong>{" "}
+          <strong>Key loadout:</strong>{" "}
           <ul>
             <li>
               <em>Chainsword</em> (Default) [A4 S5 AP−1 D1]
@@ -186,7 +190,7 @@ export default function Page() {
         </p>
 
         <div>
-          <strong>Loadout:</strong>
+          <strong>Key loadout:</strong>
 
           <ul>
             <li>
@@ -261,7 +265,7 @@ export default function Page() {
         </p>
 
         <div>
-          <strong>Loadout:</strong>
+          <strong>Key loadout:</strong>
 
           <ul>
             <li>
