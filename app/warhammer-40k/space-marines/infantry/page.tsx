@@ -6,6 +6,7 @@ import Link from "next/link";
 import Intercessors from "../../../../public/wh40k/intercessor.webp";
 import AssaultIntercessors from "../../../../public/wh40k/assault-intercessor.webp";
 import HeavyIntercessors from "../../../../public/wh40k/heavy-intercessor.webp";
+import Eliminators from "../../../../public/wh40k/eliminators.webp";
 
 const unitsPage = getPage("/warhammer-40k/space-marines/infantry");
 const archetypesPage = getPage("/warhammer-40k/archetypes");
@@ -35,8 +36,8 @@ export default function Page() {
         </div>
 
         <p>
-          <strong>Profile:</strong> M6"{" "}
-          <Link href={`${archetypesPage.href}#meq`}>MEQ</Link> + OC2
+          <strong>Profile:</strong>{" "}
+          <Link href={`${archetypesPage.href}#meq`}>MEQ</Link> OC2&uarr;
         </p>
 
         <p>
@@ -48,8 +49,8 @@ export default function Page() {
         </p>
 
         <p>
-          <strong>Come with:</strong> Bolt Pistol, Bolt Rifle, and Knives and
-          Fists
+          <strong>Default loadout:</strong> Bolt Pistol, Bolt Rifle, and Knives
+          and Fists
         </p>
 
         <p>
@@ -104,7 +105,7 @@ export default function Page() {
         </div>
 
         <p>
-          <strong>Profile:</strong> M6" MEQ + OC2
+          <strong>Profile:</strong> MEQ OC2&uarr;
         </p>
 
         <p>
@@ -116,7 +117,7 @@ export default function Page() {
         </p>
 
         <p>
-          <strong>Come with:</strong> Chainsword and Heavy Bolt Pistol
+          <strong>Default loadout:</strong> Chainsword and Heavy Bolt Pistol
         </p>
 
         <p>
@@ -162,8 +163,9 @@ export default function Page() {
         </div>
 
         <p>
-          <strong>Profile:</strong> M5"{" "}
-          <Link href={`${archetypesPage.href}#gravis`}>Gravis</Link> + OC2
+          <strong>Profile:</strong>{" "}
+          <Link href={`${archetypesPage.href}#gravis`}>Gravis</Link> M5"
+          OC2&uarr;
         </p>
 
         <p>
@@ -174,38 +176,138 @@ export default function Page() {
           <strong>Cost:</strong> 115/5 or 230/10
         </p>
 
+        <div>
+          <strong>Loadout:</strong>
+
+          <ul>
+            <li>
+              <em> Heavy Bolt Rifle</em> (Default) [30″ A2 (+1 within 15") S5
+              AP−1 D2] [HEAVY]
+            </li>
+
+            <li>
+              <em>Heavy bolter</em> (1-in-5) [36″ A3 (+2 within 18", +1 on crit)
+              S5 AP−1 D2] [HEAVY]
+            </li>
+          </ul>
+        </div>
+
         <p>
-          <strong>Come with:</strong> Heavy Bolt Rifle, Bolt Pistol, and
-          Ceramite Fists.
-        </p>
-        <p>
-          <strong>
-            Heavy Intercessors are slow, but durable objective contenders that
-            can wear down infantry with ranged fire.
-          </strong>{" "}
-          They can affordably replace Terminators or Bladeguard when surviving
-          close combat isn't paramount.
+          <strong>Unyielding in the Face of the Foe:</strong> +1 Save while
+          controlling an objective.
         </p>
 
         <p>
-          <strong>
-            The main idea is to reach and hold a midfield objective.
-          </strong>{" "}
-          Five Heavy Intercessors are 15 wounds and OC10. If you control the
-          objective, they save on 2+ trough{" "}
-          <em>Unyielding in the Face of the Foe</em>. Their melee is weak, but
-          they can persistently hold ground while shooting.
+          More than being slower, tougher Intercessors, Heavies are an
+          affordable way of holding midfield objectives or screening for more
+          fragile troops. Five are 15 wounds and OC10. If surviving prolonged
+          close combat isn't paramount, they can replace costly Terminators or
+          Bladeguards. Also, they are not beyond escorting Gravis characters.
         </p>
 
         <p>
-          <strong>
-            They can do fire support and screening off an objective too.
-          </strong>{" "}
-          The Heavy bolt rifle [30″ A2 S5 AP−1 D2] [HEAVY, RAPID FIRE 1] and
-          Heavy bolter [36″ A3 S5 AP−1 D2] [HEAVY, RAPID FIRE, SUSTAINED HITS 1]
-          handle MEQ from affar. Both hit on 2+ if stationary. Any approaching
-          infantry will receive respectively 3 attacks at 15" and 5 attacks at
-          18".
+          Anything up to a Marine, gradually aproaching a stationary Heavy
+          Intercessor will have a bad time. The typical five-man squad (4
+          rifles, 1 bolter) delivers 11 shots beyond 18″, 13 within 18″, 17
+          within 15″ if everyone sees the target. +1 if the bolter crits.
+        </p>
+
+        <p>
+          Dedicated fast assault units, however, will tie them up, and may
+          overwhelm their OC. Their weapons can't do much against TEQ and
+          beyound too.
+        </p>
+      </section>
+
+      <section>
+        <h2 id="heavy-intercessors">Eliminator Squad</h2>
+        <Image
+          src={Eliminators}
+          alt="Eliminators in Warhammer 40K"
+          className="side-img"
+        />
+
+        <div className="inlist">
+          <Badge>INFANTRY</Badge>
+          <Badge>EXPLOSIVES</Badge>
+          <Badge>IMPERIUM</Badge>
+          <Badge>PHOBOS</Badge>
+          <Badge>SMOKE</Badge>
+        </div>
+
+        <p>
+          <strong>Profile:</strong> MEQ M8″&uarr; T4&darr;
+        </p>
+
+        <p>
+          <strong>Composition:</strong> 1 Sergeant, 2 Eliminators
+        </p>
+
+        <p>
+          <strong>Cost:</strong> 85/10
+        </p>
+
+        <p>
+          <strong>Core abilities:</strong> Infiltrators, Stealth
+        </p>
+
+        <div>
+          <strong>Loadout:</strong>
+
+          <ul>
+            <li>
+              <em>Bolt sniper rifle</em> (Default) [36″ S6 AP−2 D3] [HEAVY]
+              [PRECISION]
+            </li>
+
+            <li>
+              <em>Las fusil</em> [36″ S10 AP−3 D3+3] [HEAVY]
+            </li>
+
+            <li>
+              <em>Instigator bolt carbine</em> (Sergeant only) [24″ A2 (4 within
+              12″) 2+ S5 AP−2 D2] [LETHAL HITS vs infantry] [PRECISION]
+            </li>
+          </ul>
+        </div>
+
+        <p>
+          <strong>Chameleoline Cloaks:</strong> This unit has -3" detection
+          range.
+        </p>
+
+        <p>
+          <strong>Special-issue Optics and Ammunition:</strong> While shooting,
+          either ignore cover, or enemy unit has +6" detection range.
+        </p>
+
+        <p>
+          If you have a specific long-range selective shooting job, that can
+          benefit from stealth, you may consider Eliminators. Otherwise they are
+          fragile and low-volume. Scouts offer stronger utility for 65 points.
+          Infiltrators have more bodies, healing and detection. Incursors are
+          more consistent through hit rerolls.
+        </p>
+
+        <p>
+          Loadouts support a small variety. Because of [PRECISION], the Bolt
+          sniper rifle leans towards hunting characters. The Las fusil would
+          otherwise surpass it against elites and even light armor. Choose
+          according to whatever gap you're filling. A failed wound is costly
+          either way.
+        </p>
+
+        <p>
+          The sergeant's carbine trades range and damage for volume, if you
+          anticipate closer encounters. Just remember that an Eliminator Squad
+          is only six wounds and very poor melee. Losing even one model reduces
+          the output sharply.
+        </p>
+
+        <p>
+          Their special rule works like selecting a fire mode. If the target is
+          visible you may ignore its cover. If it's not, you can increase it's
+          detection range.
         </p>
       </section>
     </>
