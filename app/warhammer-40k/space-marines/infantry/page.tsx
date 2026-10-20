@@ -116,33 +116,42 @@ export default function Page() {
           <strong>Cost:</strong> 85/5 or 170/10
         </p>
 
+        <div>
+          <strong>Loadout:</strong>{" "}
+          <ul>
+            <li>
+              <em>Chainsword</em> (Default) [A4 S5 AP−1 D1]
+            </li>
+            <li>
+              <em>Heavy Bolt Pistol</em> [A1 S5 AP-1 D1]
+            </li>
+          </ul>
+        </div>
+
         <p>
-          <strong>Default loadout:</strong> Chainsword and Heavy Bolt Pistol
+          <strong>Targeted Intercession:</strong> Chainswords get +1S +1AP on
+          charging.
         </p>
 
         <p>
-          <strong>Assault Intercessors are a budget melee battleline.</strong>{" "}
-          They can bully light infantry off objectives, but M6" makes them
-          dependent on delivery. Jump Assaults have less OC and weaker charges
-          but much better reach. Bladeguards are stronger, more durable melee.
-          Chapters like Blood Angels and Space Wolves have their own melee
-          specialists.
+          Assault Intercessors are a budget way of tying up and bullying
+          infantry off objectives, provided they're the ones initiating combat.
+          As standard M6" foot troops, they are very reliant on delivery and
+          charges to do that efficiently. If they remain engaged or receive a
+          charge instead, they don't benefit from their special rule.
         </p>
 
         <p>
-          <strong>They prefer to be the ones initiating combat.</strong> The
-          chainsword delivers four [S6 AP−2 D1] attacks on a charge. But
-          remaining engaged or receiving a charge uses their default [S5 AP−1]
-          profile instead. They can advance and charge once with{" "}
-          <em>Assault Doctrine</em>, or fall back and counter-charge with{" "}
-          <em>Tactical Doctrine</em>.
+          Still, they can make good use of doctrines. <em>Assault</em> gives
+          them advance-and-charge, while <em>Tactical</em> -
+          fallback-and-charge. And they can work as cheap bodyguards for
+          characters, some like the Captain, giving access to said doctrines.
         </p>
 
         <p>
-          <strong>They also work as cheap bodyguards</strong>, as their charge
-          bonus also applies to attached leaders. A Captain supplies Assault
-          Doctrine for advance-and-charge. A Chaplain gives [LANCE] to all
-          weapons, providing an even deadlier charge.
+          Alternatively, jump Assaults have less OC and weaker charges but much
+          better reach. Bladeguards are stronger, more durable melee. Chapters
+          like Blood Angels and Space Wolves have their own melee specialists.
         </p>
       </section>
 
