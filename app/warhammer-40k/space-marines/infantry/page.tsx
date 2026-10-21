@@ -52,7 +52,18 @@ export default function Page() {
         <div>
           <strong>Key loadout:</strong>{" "}
           <ul>
-            <li>Bolt Rifle (Default) [24" 3+ AP-1] [RAPID FIRE 1]</li>
+            <li>
+              <em>Bolt Rifle</em> (Default) [24" 3+ AP-1] [RAPID FIRE 1]
+              <ul>
+                <li>
+                  <em>Saturation</em> [A2 S5 D1] [ASSAULT]
+                </li>
+
+                <li>
+                  <em>Focused Fire</em> [A1 S6 D2] [HEAVY]
+                </li>
+              </ul>
+            </li>
             <li>
               Grenade Launcher (1-in-5){" "}
               <ul>
@@ -65,10 +76,8 @@ export default function Page() {
 
         <p>
           <strong>Tactical Mainstay:</strong> Can act even while engaged or{" "}
-          <Link href={`${roundPage.href}#battle-shock-test`}>
-            Battle-shocked
-          </Link>
-          , and shoot while acting.
+          <Link href={`${roundPage.href}#half-strength`}>Battle-shocked</Link>,
+          and shoot while acting.
         </p>
 
         <p>
@@ -77,18 +86,19 @@ export default function Page() {
         </p>
 
         <p>
-          Intercessors are simply ranged general-purpose infantry. They are
-          supple enough to advance, defend, engage light infantry, and do
-          objectives all together. They fill gaps so well that a squad is almost
-          never a bad idea, but not always necessary.
+          Intercessors are simply the Marines' general-purpose infantry. They
+          fill gaps, so your specialists and elites don't have to. A reasonably
+          durable and priced package that can contribute to the front, rear, or
+          sides. A squad of Intercessors is almost never a bad idea, but it
+          might be unnecessary. Check your list's needs.
         </p>
 
         <p>
           The Bolt Rifle has two firing modes: anti-
           <Link href={`${archetypesPage.href}#geq`}>GEQ</Link>{" "}
-          <em>Saturation</em> [S5, D1] and anti-MEQ <em>Focused Fire</em> [S6,
-          D2]. You also can, and should, attach one Grenade Launcher per 5
-          Rifles for some reach against both hordes and tougher infantry.
+          <em>Saturation</em> and anti-MEQ <em>Focused Fire</em>. You also can,
+          and should, attach one Grenade Launcher per 5 Rifles for some reach
+          against both hordes and tougher infantry.
         </p>
       </section>
 
